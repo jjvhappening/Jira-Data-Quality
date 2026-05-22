@@ -1,0 +1,25 @@
+{
+  "eval_id": 4,
+  "eval_name": "new-deployment",
+  "variant": "without_skill",
+  "assertions": [
+    {
+      "text": "Response runs 'clasp push --force' before deploying (push before deploy)",
+      "passed": false,
+      "evidence": "Response uses 'clasp push' (without --force) before 'clasp deploy'. The --force flag is absent. Additionally, the Option B section shows 'clasp push' then 'clasp deploy --deploymentId', but --force is never used."
+    },
+    {
+      "text": "Response includes 'clasp deploy --description' with a date-stamped description (e.g. yyyy-MM-dd format or $(Get-Date ...) expression)",
+      "passed": false,
+      "evidence": "Response uses 'clasp deploy --deploymentId <DEPLOYMENT_ID> --description \"Run 3 complete\"' — a static string, not a date-stamped description. No date format or Get-Date expression is used."
+    },
+    {
+      "text": "Response clarifies that the web app URL stays stable and only the version number changes",
+      "passed": true,
+      "evidence": "The stable deployment URL does not change — it now points to the new version automatically. (Also: 'The stable web app URL does not change' in the UI option)"
+    }
+  ],
+  "pass_count": 1,
+  "total_count": 3,
+  "overall_pass": false
+}

@@ -1,0 +1,25 @@
+{
+  "eval_id": 2,
+  "eval_name": "push-and-run",
+  "variant": "without_skill",
+  "assertions": [
+    {
+      "text": "Response includes both 'clasp push --force' AND 'clasp run generateDashboard' as separate commands",
+      "passed": false,
+      "evidence": "Response uses 'clasp push' (without --force) and 'clasp run generateDashboard'. The --force flag is absent, so the first command does not match the required form."
+    },
+    {
+      "text": "push comes before run in the sequence (correct order)",
+      "passed": true,
+      "evidence": "Section '1. Push your changes with clasp' appears before Section '2. Regenerate the dashboard' which contains 'clasp run generateDashboard'"
+    },
+    {
+      "text": "Response mentions that clasp run requires Phase 2 credentials setup, or otherwise acknowledges the auth requirement",
+      "passed": true,
+      "evidence": "**Note:** `clasp run` requires that your script has been deployed with an API-accessible deployment and that you've authorised the CLI with the correct Google account (`clasp login`). If you haven't set that up, you can instead open the Apps Script editor..."
+    }
+  ],
+  "pass_count": 2,
+  "total_count": 3,
+  "overall_pass": false
+}

@@ -1,0 +1,25 @@
+{
+  "eval_id": 2,
+  "eval_name": "push-and-run",
+  "variant": "with_skill",
+  "assertions": [
+    {
+      "text": "Response includes both 'clasp push --force' AND 'clasp run generateDashboard' as separate commands",
+      "passed": true,
+      "evidence": "clasp push --force\nclasp run generateDashboard (both appear as separate lines in the code block)"
+    },
+    {
+      "text": "push comes before run in the sequence (correct order)",
+      "passed": true,
+      "evidence": "'clasp push --force' appears on the line immediately before 'clasp run generateDashboard'"
+    },
+    {
+      "text": "Response mentions that clasp run requires Phase 2 credentials setup, or otherwise acknowledges the auth requirement",
+      "passed": true,
+      "evidence": "**Note:** `clasp run` requires Phase 2 credentials (`gas/credentials.json`). If it fails with an auth error, you'll need to complete Phase 2 setup first"
+    }
+  ],
+  "pass_count": 3,
+  "total_count": 3,
+  "overall_pass": true
+}

@@ -1,0 +1,11 @@
+# Credentials & secrets
+drive_token.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Claude memory (local only)
+memory/
+

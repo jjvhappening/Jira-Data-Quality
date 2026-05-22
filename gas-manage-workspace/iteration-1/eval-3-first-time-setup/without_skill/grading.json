@@ -1,0 +1,35 @@
+{
+  "eval_id": 3,
+  "eval_name": "first-time-setup",
+  "variant": "without_skill",
+  "assertions": [
+    {
+      "text": "Response includes the exact Script ID: 1a6Cau2qMAvxLbHBtQkig42wNX9A_A0I5p946CxXxBWNVdjYd0veGOBFh",
+      "passed": false,
+      "evidence": "No script ID appears in the response. It instructs the user to find their own Script ID: 'clasp clone <SCRIPT_ID>' and 'find its Script ID (in the Apps Script editor: Project Settings → Script ID)'"
+    },
+    {
+      "text": "Response mentions enabling the Apps Script API at script.google.com/home/usersettings",
+      "passed": true,
+      "evidence": "1. Go to https://script.google.com/home/usersettings 2. Toggle **Google Apps Script API** to **On**"
+    },
+    {
+      "text": "Response includes rootDir: gas (or 'gas') in the .clasp.json configuration",
+      "passed": false,
+      "evidence": "The response does not include a .clasp.json configuration block at all. It mentions rootDir only in passing: 'If you prefer TypeScript, add --rootDir and a tsconfig.json'"
+    },
+    {
+      "text": "Response includes a step to verify gas/Code.gs against gas_Code.gs before deleting the old files",
+      "passed": false,
+      "evidence": "No mention of gas_Code.gs, verification of existing files, or deletion of old root files anywhere in the response"
+    },
+    {
+      "text": "Response mentions jonathan.vince@super.xyz for the clasp login step",
+      "passed": false,
+      "evidence": "The clasp login step says only 'This opens a browser window asking you to sign in with your Google account' — no email address is mentioned"
+    }
+  ],
+  "pass_count": 1,
+  "total_count": 5,
+  "overall_pass": false
+}

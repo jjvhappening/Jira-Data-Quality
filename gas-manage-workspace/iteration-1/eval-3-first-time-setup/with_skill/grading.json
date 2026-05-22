@@ -1,0 +1,35 @@
+{
+  "eval_id": 3,
+  "eval_name": "first-time-setup",
+  "variant": "with_skill",
+  "assertions": [
+    {
+      "text": "Response includes the exact Script ID: 1a6Cau2qMAvxLbHBtQkig42wNX9A_A0I5p946CxXxBWNVdjYd0veGOBFh",
+      "passed": true,
+      "evidence": "\"scriptId\": \"1a6Cau2qMAvxLbHBtQkig42wNX9A_A0I5p946CxXxBWNVdjYd0veGOBFh\""
+    },
+    {
+      "text": "Response mentions enabling the Apps Script API at script.google.com/home/usersettings",
+      "passed": true,
+      "evidence": "Open this URL in your browser: **https://script.google.com/home/usersettings** Toggle **Google Apps Script API** to **On**."
+    },
+    {
+      "text": "Response includes rootDir: gas (or 'gas') in the .clasp.json configuration",
+      "passed": true,
+      "evidence": "\"rootDir\": \"gas\" (appears in the .clasp.json code block in Step 5)"
+    },
+    {
+      "text": "Response includes a step to verify gas/Code.gs against gas_Code.gs before deleting the old files",
+      "passed": true,
+      "evidence": "## Step 7 — Verify against existing root files: Compare the pulled files against the copies that currently sit at the project root: - `gas/Code.gs` vs `gas_Code.gs`"
+    },
+    {
+      "text": "Response mentions jonathan.vince@super.xyz for the clasp login step",
+      "passed": true,
+      "evidence": "Sign in with **jonathan.vince@super.xyz** (in Step 4 — Authenticate)"
+    }
+  ],
+  "pass_count": 5,
+  "total_count": 5,
+  "overall_pass": true
+}

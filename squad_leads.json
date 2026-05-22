@@ -1,0 +1,313 @@
+{
+  "_meta": {
+    "description": "Engineering Manager Slack ID mapping for PLAYER Jira data quality workflow. Squad-level messages go to the Engineering Manager for each squad. Tribe-level summaries go to the tribe EM lead. Used for local lookup — no Slack search needed at runtime.",
+    "notion_page_url": "https://www.notion.so/superbet/Player-Org-29b032f852c5807fab59c839b9710512",
+    "last_refreshed": "2026-05-11",
+    "refresh_instructions": "1. Fetch the Notion page above. 2. For any changed 'Engineering Manager' cells, call notion-get-users with the new notion_user_id to get their email. 3. Call slack_search_users with their email to get the new slack_id. 4. Update this file and set last_refreshed to today."
+  },
+  "notification_policy": {
+    "declining_trend_runs": 3
+  },
+  "tribes": {
+    "Player Engagement": {
+      "tribe_leads": [
+        {
+          "name": "Jacques le Roux",
+          "role": "Engineering Manager",
+          "email": "jacques.leroux@happening.xyz",
+          "slack_id": "U04HC4MGP7E",
+          "notion_user_id": "add37630-92c0-458b-9686-54c5f32508b2"
+        }
+      ],
+      "_tribe_leads_note": "Antonio Goard (Head of Product, slack_id: U031WLUFDH7) removed 2026-04-26 — PM role, not EM. Tribe messages are sent to engineering leads only.",
+      "squads": {
+        "GraySkull": {
+          "engineering_manager": {
+            "name": "Maria Diaz",
+            "email": "maria.diaz@happening.xyz",
+            "slack_id": "U09V8TPJCQ1",
+            "notion_user_id": "2aed872b-594c-8148-9d35-00020569c787"
+          }
+        },
+        "Thundercats": {
+          "engineering_manager": {
+            "name": "Brian Hobbs",
+            "email": "brian.hobbs@happening.xyz",
+            "slack_id": "U08S3VB7U7J",
+            "notion_user_id": "1edd872b-594c-81af-89a2-0002700dbcb3",
+            "_note": "Changed from Gordan Valjak 2026-05-11 — Notion now shows Brian Hobbs as Thundercats EM. Brian also covers Sb Club Migration."
+          }
+        },
+        "Bonus Integration": {
+          "engineering_manager": {
+            "name": "Flavio Kruger",
+            "email": "flavio.kruger@happening.xyz",
+            "slack_id": "U09JWR9GM7C",
+            "notion_user_id": "280d872b-594c-8198-bed4-0002e2fb282a"
+          }
+        },
+        "Mobius": {
+          "engineering_manager": {
+            "name": "Jacques le Roux",
+            "email": "jacques.leroux@happening.xyz",
+            "slack_id": "U04HC4MGP7E",
+            "notion_user_id": "add37630-92c0-458b-9686-54c5f32508b2",
+            "_note": "Same person as tribe EM lead"
+          }
+        },
+        "Gamification": {
+          "engineering_manager": {
+            "name": "Matthias Tison",
+            "email": "matthias.tison@happening.xyz",
+            "slack_id": "U038A6S66UW",
+            "notion_user_id": "79c91fbd-3d04-405b-8042-efbc6e604532"
+          }
+        },
+        "Sb Club Migration": {
+          "engineering_manager": {
+            "name": "Brian Hobbs",
+            "email": "brian.hobbs@happening.xyz",
+            "slack_id": "U08S3VB7U7J",
+            "notion_user_id": "1edd872b-594c-81af-89a2-0002700dbcb3",
+            "_note": "Same EM as Thundercats (as of 2026-05-11)"
+          }
+        },
+        "Player Experience - Gamification": {
+          "engineering_manager": {
+            "name": "Diogo Ribeiro",
+            "email": "diogo.ribeiro@happening.xyz",
+            "slack_id": "U097S9KFX41",
+            "notion_user_id": "240d872b-594c-81f3-8591-00025a6bd939"
+          }
+        },
+        "Player Experience - Growth": {
+          "engineering_manager": {
+            "name": "Diogo Ribeiro",
+            "email": "diogo.ribeiro@happening.xyz",
+            "slack_id": "U097S9KFX41",
+            "notion_user_id": "240d872b-594c-81f3-8591-00025a6bd939",
+            "_note": "Same EM as Player Experience - Gamification"
+          }
+        },
+        "Hunch (F2P)": {
+          "engineering_manager": {
+            "name": "Andrew Tibot",
+            "email": "andrew.tibot@happening.xyz",
+            "slack_id": "U08UWM2TSS1",
+            "notion_user_id": null,
+            "_note": "Squad lead is a Product Manager (Free to Play PM), not an EM — added 2026-05-21 per Jon Vince"
+          }
+        }
+      }
+    },
+    "Transact": {
+      "tribe_leads": [],
+      "_tribe_leads_note": "D. Cem Gunduz (Director of Engineering, notion_user_id: 294d872b-594c-8193-9470-0002afb2a5b8, slack_id: U09NJU9B324) excluded as of 2026-04-24. Review at next refresh whether to reinstate.",
+      "squads": {
+        "APM Experience": {
+          "engineering_manager": {
+            "name": "Ruchita Ram",
+            "email": "ruchita.ram@happening.xyz",
+            "slack_id": "U09G7JMLYUF",
+            "notion_user_id": "27dd872b-594c-8181-b70a-0002930bfa35"
+          }
+        },
+        "Card Experience": {
+          "engineering_manager": {
+            "name": "Emanuele Manco",
+            "email": "emanuele.manco@happening.xyz",
+            "slack_id": "U0877NJRB5Y",
+            "notion_user_id": "173d872b-594c-813a-9f85-00029aac8580"
+          }
+        },
+        "Payment Experience": {
+          "engineering_manager": {
+            "name": "Emanuele Manco",
+            "email": "emanuele.manco@happening.xyz",
+            "slack_id": "U0877NJRB5Y",
+            "notion_user_id": "173d872b-594c-813a-9f85-00029aac8580",
+            "_note": "Same EM as Card Experience"
+          }
+        },
+        "Payment Platform": {
+          "engineering_manager": {
+            "name": "Juan Vazquez",
+            "email": "juan.vazquez@super.xyz",
+            "slack_id": "U0ARWNX4NTD",
+            "notion_user_id": "33dd872b-594c-81b5-9189-0002b508f19e"
+          }
+        },
+        "Wallet Core": {
+          "engineering_manager": {
+            "name": "Moses Mansaray",
+            "email": "moses.mansaray@happening.xyz",
+            "slack_id": "U08S16PQVQC",
+            "notion_user_id": "1f1d872b-594c-81be-af51-0002a1bda197"
+          }
+        },
+        "Wallet Integrations": {
+          "engineering_manager": {
+            "name": "Moses Mansaray",
+            "email": "moses.mansaray@happening.xyz",
+            "slack_id": "U08S16PQVQC",
+            "notion_user_id": "1f1d872b-594c-81be-af51-0002a1bda197",
+            "_note": "Same EM as Wallet Core"
+          }
+        }
+      }
+    },
+    "Fraud Prevention": {
+      "tribe_leads": [
+        {
+          "name": "Litha Hari",
+          "role": "Engineering Manager",
+          "email": "litha.hari@happening.xyz",
+          "slack_id": "U08UY26R4J1",
+          "notion_user_id": "206d872b-594c-81d7-a10d-0002662e86d6"
+        }
+      ],
+      "_tribe_leads_note": "Filip Gvardijan (Head of Product, slack_id: U01L32D3KN3) removed 2026-04-26 — PM role, not EM. Tribe messages are sent to engineering leads only.",
+      "squads": {
+        "Fraud Engineering": {
+          "engineering_manager": {
+            "name": "Litha Hari",
+            "email": "litha.hari@happening.xyz",
+            "slack_id": "U08UY26R4J1",
+            "notion_user_id": "206d872b-594c-81d7-a10d-0002662e86d6",
+            "_note": "Same person as tribe EM lead — no separate squad EM in Notion"
+          }
+        }
+      }
+    },
+    "Retail/Multichannel": {
+      "_squad_messages": "suppressed",
+      "_squad_messages_note": "Retail squads only recently started using Jira. Only Tomislav Pavic (tribe lead) is notified until further notice. Review this on the first run after 2026-09-01.",
+      "_squad_messages_review_after": "2026-09-01",
+      "tribe_leads": [
+        {
+          "name": "Tomislav Pavic",
+          "role": "Technical Program Manager",
+          "email": "tomislav.pavic@happening.xyz",
+          "slack_id": "U052U4CEZQQ",
+          "notion_user_id": null,
+          "_note": "Replaced Kristijan Franković (kristijan.frankovic@happening.xyz, UTWGM5L22) 2026-04-28 — Tomislav is the correct contact for Retail comms"
+        }
+      ],
+      "_tribe_leads_note": "Milan Kasalica (Head of Product, slack_id: UBJ5M8TSN) removed 2026-04-26 — PM role, not EM. Tribe messages are sent to engineering leads only.",
+      "squads": {
+        "Retail Sports Experience (RISE)": {
+          "engineering_manager": {
+            "name": "Mladen Petr",
+            "email": "mladen.petr@happening.xyz",
+            "slack_id": "U06J9AWP490",
+            "notion_user_id": "01f2360d-f023-4133-8177-eb4b56af6d59"
+          }
+        },
+        "Retail Gaming Experience": {
+          "engineering_manager": {
+            "name": "Nikola Đekić",
+            "email": "nikola.dekic@super.xyz",
+            "slack_id": "U057N8L4KFF",
+            "notion_user_id": "f80b5eda-4790-4257-96a3-d2eb92212966"
+          }
+        },
+        "Retail Operations Experience": {
+          "engineering_manager": {
+            "name": "Nikola Đekić",
+            "email": "nikola.dekic@super.xyz",
+            "slack_id": "U057N8L4KFF",
+            "notion_user_id": "f80b5eda-4790-4257-96a3-d2eb92212966",
+            "_note": "Same EM as Retail Gaming Experience"
+          }
+        },
+        "Retail Platform Foundation": {
+          "engineering_manager": {
+            "name": "Stipan Mikulić",
+            "email": "stipan.mikulic@happening.xyz",
+            "slack_id": "U011Y0Q5FB8",
+            "notion_user_id": "18d14e80-f1f6-485e-a403-bc44153847cf"
+          }
+        },
+        "Retail Added Value Experience": {
+          "engineering_manager": {
+            "name": "Stipan Mikulić",
+            "email": "stipan.mikulic@happening.xyz",
+            "slack_id": "U011Y0Q5FB8",
+            "notion_user_id": "18d14e80-f1f6-485e-a403-bc44153847cf",
+            "_note": "Same EM as Retail Platform Foundation"
+          }
+        },
+        "Retail Terminals Platform": {
+          "engineering_manager": {
+            "name": "Boris Somodvarac",
+            "email": "boris.somodvarac@happening.xyz",
+            "slack_id": "U0351LAKW3B",
+            "notion_user_id": "7b0ca1fb-b0f2-4e3d-8d01-1fa40ade088b"
+          }
+        }
+      }
+    },
+    "Manage": {
+      "tribe_leads": [
+        {
+          "name": "Stephen King",
+          "role": "Director of Engineering",
+          "email": "steve.king@happening.xyz",
+          "slack_id": "UBJPT5DEE",
+          "notion_user_id": "d77c1707-5479-42dc-b2ed-bd6c5bdf0f8c"
+        },
+        {
+          "name": "Shashank Goyal",
+          "role": "Engineering Manager",
+          "email": "shashank.goyal@happening.xyz",
+          "slack_id": "U03TFCHE4F5",
+          "notion_user_id": "61081c9c-4398-46d4-9f6a-8154587768f0"
+        }
+      ],
+      "squads": {
+        "Player Onboarding": {
+          "engineering_manager": {
+            "name": "Andrey Posnov",
+            "email": "andrey.posnov@happening.xyz",
+            "slack_id": "U09JVD5A8ES",
+            "notion_user_id": "280d872b-594c-8171-b8c6-00025bef9dd6"
+          }
+        },
+        "Player Identity": {
+          "engineering_manager": {
+            "name": "Jorge Vilca",
+            "email": "jorge.vilca@happening.xyz",
+            "slack_id": "U0AE801674L",
+            "notion_user_id": "303d872b-594c-8146-8a38-0002d498e087"
+          }
+        },
+        "Player Account": {
+          "engineering_manager": {
+            "name": "David Rico",
+            "email": "david.rico@happening.xyz",
+            "slack_id": "U09LBKEU0H2",
+            "notion_user_id": "28bd872b-594c-811c-a2d5-000262328ba7"
+          }
+        },
+        "Manage Platform": {
+          "engineering_manager": null,
+          "_note": "Engineering Manager is TBH (To Be Hired) in Notion"
+        },
+        "Player Support": {
+          "engineering_manager": {
+            "name": "Shashank Goyal",
+            "email": "shashank.goyal@happening.xyz",
+            "slack_id": "U03TFCHE4F5",
+            "notion_user_id": "61081c9c-4398-46d4-9f6a-8154587768f0",
+            "_note": "Same person as tribe EM lead — no dedicated squad EM in Notion"
+          }
+        }
+      }
+    }
+  },
+  "summary_recipient": {
+    "name": "Jon Vince",
+    "slack_id": "U08HBGPPRNY",
+    "email": "jonathan.vince@happening.xyz"
+  }
+}

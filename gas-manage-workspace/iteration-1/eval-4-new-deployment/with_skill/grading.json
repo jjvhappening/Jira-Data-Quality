@@ -1,0 +1,25 @@
+{
+  "eval_id": 4,
+  "eval_name": "new-deployment",
+  "variant": "with_skill",
+  "assertions": [
+    {
+      "text": "Response runs 'clasp push --force' before deploying (push before deploy)",
+      "passed": true,
+      "evidence": "clasp push --force appears on the line before clasp deploy --description \"Run $(Get-Date -Format 'yyyy-MM-dd')\""
+    },
+    {
+      "text": "Response includes 'clasp deploy --description' with a date-stamped description (e.g. yyyy-MM-dd format or $(Get-Date ...) expression)",
+      "passed": true,
+      "evidence": "clasp deploy --description \"Run $(Get-Date -Format 'yyyy-MM-dd')\""
+    },
+    {
+      "text": "Response clarifies that the web app URL stays stable and only the version number changes",
+      "passed": true,
+      "evidence": "The stable web app URL does not change — it automatically points to the newest deployment."
+    }
+  ],
+  "pass_count": 3,
+  "total_count": 3,
+  "overall_pass": true
+}

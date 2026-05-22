@@ -1,0 +1,5277 @@
+{
+  "schema_version": 1,
+  "runs": [
+    {
+      "run": 2,
+      "date": "2026-05-04",
+      "total": 302,
+      "with_gaps": 254,
+      "compliant": 48,
+      "avg_score": 76,
+      "gap_counts": {
+        "Parent": 47,
+        "Product Lead": 44,
+        "Engineering Lead": 43,
+        "Roadmap Priority": 12,
+        "Impact (PDT)": 204,
+        "Country (PDT)": 120,
+        "Areas Impacted": 1,
+        "Investment Category": 26,
+        "Start Date": 103,
+        "Description / PRD": 40,
+        "Tribes Impacted": 23,
+        "End of Definition Date": 151,
+        "Health Status": 20,
+        "Planned Release Date": 63,
+        "Short Status Update": 145,
+        "Due Date": 17
+      },
+      "tribes": {
+        "Player Engagement": {
+          "total": 105,
+          "avg_score": 67,
+          "with_gaps": 104,
+          "compliant": 1,
+          "gap_counts": {
+            "Parent": 14,
+            "Product Lead": 31,
+            "Engineering Lead": 38,
+            "Roadmap Priority": 12,
+            "Impact (PDT)": 93,
+            "Country (PDT)": 67,
+            "Investment Category": 5,
+            "Start Date": 24,
+            "Description / PRD": 7,
+            "Tribes Impacted": 23,
+            "End of Definition Date": 70,
+            "Health Status": 18,
+            "Planned Release Date": 27,
+            "Short Status Update": 72,
+            "Due Date": 13
+          },
+          "squads": {
+            "Loyalty": {
+              "total": 30,
+              "avg_score": 73,
+              "with_gaps": 29,
+              "gap_counts": {
+                "Parent": 4,
+                "Product Lead": 8,
+                "Engineering Lead": 8,
+                "Roadmap Priority": 1,
+                "Impact (PDT)": 29,
+                "Country (PDT)": 15,
+                "Investment Category": 1,
+                "Start Date": 1,
+                "Description / PRD": 4,
+                "Tribes Impacted": 6,
+                "End of Definition Date": 20,
+                "Health Status": 1,
+                "Planned Release Date": 6,
+                "Short Status Update": 18,
+                "Due Date": 1
+              }
+            },
+            "Engagement Integrations": {
+              "total": 23,
+              "avg_score": 67,
+              "with_gaps": 23,
+              "gap_counts": {
+                "Parent": 2,
+                "Product Lead": 6,
+                "Engineering Lead": 6,
+                "Roadmap Priority": 2,
+                "Impact (PDT)": 23,
+                "Country (PDT)": 18,
+                "Investment Category": 3,
+                "Start Date": 4,
+                "Tribes Impacted": 3,
+                "End of Definition Date": 20,
+                "Health Status": 2,
+                "Planned Release Date": 7,
+                "Short Status Update": 20,
+                "Due Date": 1
+              }
+            },
+            "Thundercats": {
+              "total": 11,
+              "avg_score": 55,
+              "with_gaps": 11,
+              "gap_counts": {
+                "Parent": 3,
+                "Product Lead": 5,
+                "Engineering Lead": 7,
+                "Roadmap Priority": 5,
+                "Impact (PDT)": 11,
+                "Country (PDT)": 8,
+                "Start Date": 5,
+                "Description / PRD": 1,
+                "Tribes Impacted": 5,
+                "End of Definition Date": 7,
+                "Health Status": 5,
+                "Planned Release Date": 5,
+                "Short Status Update": 7,
+                "Due Date": 5
+              }
+            },
+            "GraySkull": {
+              "total": 25,
+              "avg_score": 62,
+              "with_gaps": 25,
+              "gap_counts": {
+                "Parent": 5,
+                "Product Lead": 4,
+                "Engineering Lead": 9,
+                "Roadmap Priority": 4,
+                "Impact (PDT)": 25,
+                "Country (PDT)": 20,
+                "Investment Category": 1,
+                "Start Date": 12,
+                "Tribes Impacted": 6,
+                "End of Definition Date": 18,
+                "Health Status": 8,
+                "Planned Release Date": 9,
+                "Short Status Update": 18,
+                "Due Date": 6
+              }
+            },
+            "Engagement Platform": {
+              "total": 4,
+              "avg_score": 64,
+              "with_gaps": 4,
+              "gap_counts": {
+                "Product Lead": 2,
+                "Engineering Lead": 2,
+                "Impact (PDT)": 4,
+                "Country (PDT)": 4,
+                "Description / PRD": 1,
+                "End of Definition Date": 2,
+                "Short Status Update": 2
+              }
+            },
+            "No squad": {
+              "total": 1,
+              "avg_score": 62,
+              "with_gaps": 1,
+              "gap_counts": {
+                "Impact (PDT)": 1,
+                "Country (PDT)": 1,
+                "Start Date": 1,
+                "Description / PRD": 1,
+                "End of Definition Date": 1,
+                "Short Status Update": 1
+              }
+            },
+            "Player Experience - Growth": {
+              "total": 10,
+              "avg_score": 80,
+              "with_gaps": 10,
+              "gap_counts": {
+                "Product Lead": 6,
+                "Engineering Lead": 6,
+                "Country (PDT)": 1,
+                "Start Date": 1,
+                "Tribes Impacted": 3,
+                "End of Definition Date": 1,
+                "Health Status": 2,
+                "Short Status Update": 6
+              }
+            },
+            "Retail Added Value Experience": {
+              "total": 1,
+              "avg_score": 94,
+              "with_gaps": 1,
+              "gap_counts": {
+                "End of Definition Date": 1
+              }
+            }
+          }
+        },
+        "Transact": {
+          "total": 38,
+          "avg_score": 89,
+          "with_gaps": 26,
+          "compliant": 12,
+          "gap_counts": {
+            "Parent": 1,
+            "Impact (PDT)": 20,
+            "Country (PDT)": 5,
+            "Investment Category": 1,
+            "Start Date": 6,
+            "Description / PRD": 5,
+            "End of Definition Date": 9,
+            "Health Status": 2,
+            "Planned Release Date": 4,
+            "Short Status Update": 2
+          },
+          "squads": {
+            "APM Experience": {
+              "total": 7,
+              "avg_score": 81,
+              "with_gaps": 7,
+              "gap_counts": {
+                "Impact (PDT)": 7,
+                "Country (PDT)": 2,
+                "Investment Category": 1,
+                "End of Definition Date": 3,
+                "Health Status": 2,
+                "Planned Release Date": 3
+              }
+            },
+            "Wallet Core": {
+              "total": 10,
+              "avg_score": 86,
+              "with_gaps": 9,
+              "gap_counts": {
+                "Parent": 1,
+                "Impact (PDT)": 9,
+                "Country (PDT)": 2,
+                "Start Date": 1,
+                "Description / PRD": 2,
+                "End of Definition Date": 3
+              }
+            },
+            "Wallet Integrations": {
+              "total": 6,
+              "avg_score": 88,
+              "with_gaps": 4,
+              "gap_counts": {
+                "Impact (PDT)": 4,
+                "Country (PDT)": 1,
+                "Start Date": 1,
+                "Description / PRD": 2,
+                "End of Definition Date": 2
+              }
+            },
+            "Payment Platform": {
+              "total": 9,
+              "avg_score": 97,
+              "with_gaps": 2,
+              "gap_counts": {
+                "Description / PRD": 1,
+                "End of Definition Date": 1,
+                "Planned Release Date": 1,
+                "Short Status Update": 2
+              }
+            },
+            "Card Experience": {
+              "total": 5,
+              "avg_score": 93,
+              "with_gaps": 4,
+              "gap_counts": {
+                "Start Date": 4
+              }
+            },
+            "Payment Experience": {
+              "total": 1,
+              "avg_score": 100,
+              "with_gaps": 0,
+              "gap_counts": {}
+            }
+          }
+        },
+        "Fraud Prevention": {
+          "total": 18,
+          "avg_score": 96,
+          "with_gaps": 3,
+          "compliant": 15,
+          "gap_counts": {
+            "Parent": 1,
+            "Product Lead": 1,
+            "Engineering Lead": 1,
+            "Impact (PDT)": 1,
+            "Start Date": 3
+          },
+          "squads": {
+            "No squad": {
+              "total": 1,
+              "avg_score": 50,
+              "with_gaps": 1,
+              "gap_counts": {
+                "Parent": 1,
+                "Product Lead": 1,
+                "Engineering Lead": 1,
+                "Impact (PDT)": 1,
+                "Start Date": 1
+              }
+            },
+            "Fraud Ops": {
+              "total": 4,
+              "avg_score": 95,
+              "with_gaps": 2,
+              "gap_counts": {
+                "Start Date": 2
+              }
+            },
+            "Fraud Engineering": {
+              "total": 13,
+              "avg_score": 100,
+              "with_gaps": 0,
+              "gap_counts": {}
+            }
+          }
+        },
+        "Manage": {
+          "total": 141,
+          "avg_score": 76,
+          "with_gaps": 121,
+          "compliant": 20,
+          "gap_counts": {
+            "Parent": 31,
+            "Product Lead": 12,
+            "Engineering Lead": 4,
+            "Impact (PDT)": 90,
+            "Country (PDT)": 48,
+            "Areas Impacted": 1,
+            "Investment Category": 20,
+            "Start Date": 70,
+            "Description / PRD": 28,
+            "End of Definition Date": 72,
+            "Planned Release Date": 32,
+            "Short Status Update": 71,
+            "Due Date": 4
+          },
+          "squads": {
+            "Player Account": {
+              "total": 38,
+              "avg_score": 68,
+              "with_gaps": 38,
+              "gap_counts": {
+                "Parent": 13,
+                "Product Lead": 1,
+                "Engineering Lead": 1,
+                "Impact (PDT)": 38,
+                "Country (PDT)": 15,
+                "Investment Category": 11,
+                "Start Date": 27,
+                "Description / PRD": 9,
+                "End of Definition Date": 23,
+                "Planned Release Date": 8,
+                "Short Status Update": 22
+              }
+            },
+            "No squad": {
+              "total": 3,
+              "avg_score": 56,
+              "with_gaps": 3,
+              "gap_counts": {
+                "Parent": 1,
+                "Product Lead": 1,
+                "Engineering Lead": 1,
+                "Impact (PDT)": 3,
+                "Country (PDT)": 2,
+                "Areas Impacted": 1,
+                "Investment Category": 2,
+                "Start Date": 2,
+                "End of Definition Date": 1,
+                "Planned Release Date": 1,
+                "Short Status Update": 1
+              }
+            },
+            "Player Identity": {
+              "total": 30,
+              "avg_score": 76,
+              "with_gaps": 28,
+              "gap_counts": {
+                "Impact (PDT)": 28,
+                "Country (PDT)": 22,
+                "Start Date": 6,
+                "Description / PRD": 12,
+                "End of Definition Date": 13,
+                "Planned Release Date": 3,
+                "Short Status Update": 13,
+                "Due Date": 3
+              }
+            },
+            "Player Onboarding": {
+              "total": 48,
+              "avg_score": 83,
+              "with_gaps": 31,
+              "gap_counts": {
+                "Parent": 17,
+                "Product Lead": 2,
+                "Engineering Lead": 2,
+                "Start Date": 27,
+                "Description / PRD": 6,
+                "End of Definition Date": 31,
+                "Planned Release Date": 19,
+                "Short Status Update": 31,
+                "Due Date": 1
+              }
+            },
+            "Player Support": {
+              "total": 11,
+              "avg_score": 69,
+              "with_gaps": 11,
+              "gap_counts": {
+                "Impact (PDT)": 11,
+                "Country (PDT)": 7,
+                "Investment Category": 7,
+                "Start Date": 8,
+                "Description / PRD": 1,
+                "End of Definition Date": 4,
+                "Planned Release Date": 1,
+                "Short Status Update": 4
+              }
+            },
+            "Manage Platform": {
+              "total": 10,
+              "avg_score": 78,
+              "with_gaps": 10,
+              "gap_counts": {
+                "Product Lead": 8,
+                "Impact (PDT)": 10,
+                "Country (PDT)": 2
+              }
+            },
+            "Payment Platform": {
+              "total": 1,
+              "avg_score": 100,
+              "with_gaps": 0,
+              "gap_counts": {}
+            }
+          }
+        }
+      },
+      "top_offenders": [
+        {
+          "key": "PLAYER-916",
+          "summary": "Onboarding Verification Method Sequencing",
+          "tribe": "Manage",
+          "squad": "No squad",
+          "score": 50,
+          "missing_count": 8,
+          "missing": [
+            "Parent",
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Investment Category",
+            "Start Date",
+            "End of Definition Date",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-102",
+          "summary": "EGT Digital Buy Bonus Rounds (RO Migration)",
+          "tribe": "Player Engagement",
+          "squad": "Engagement Integrations",
+          "score": 56,
+          "missing_count": 7,
+          "missing": [
+            "Product Lead",
+            "Engineering Lead",
+            "Impact (PDT)",
+            "Country (PDT)",
+            "End of Definition Date",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-1054",
+          "summary": "Amusnet (EGT) Countdown Free Spins (RO Migration)",
+          "tribe": "Player Engagement",
+          "squad": "Engagement Integrations",
+          "score": 56,
+          "missing_count": 7,
+          "missing": [
+            "Product Lead",
+            "Engineering Lead",
+            "Impact (PDT)",
+            "Country (PDT)",
+            "End of Definition Date",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-233",
+          "summary": "🇵🇱 Poland RG Improvements - Web and Backend",
+          "tribe": "Manage",
+          "squad": "Player Account",
+          "score": 56,
+          "missing_count": 7,
+          "missing": [
+            "Parent",
+            "Impact (PDT)",
+            "Investment Category",
+            "Start Date",
+            "End of Definition Date",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-110",
+          "summary": "Push Gaming Free Spins",
+          "tribe": "Player Engagement",
+          "squad": "Engagement Integrations",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Investment Category",
+            "Start Date",
+            "End of Definition Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-914",
+          "summary": "BAU - Small Improvements & Tech Maintenance (Continuous)",
+          "tribe": "Player Engagement",
+          "squad": "No squad",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Start Date",
+            "Description / PRD",
+            "End of Definition Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-1053",
+          "summary": "Free-To-Play ‘Passa A Bola’ group play game",
+          "tribe": "Player Engagement",
+          "squad": "Engagement Integrations",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Tribes Impacted",
+            "End of Definition Date",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-869",
+          "summary": "CICO - Superbet Romania",
+          "tribe": "Transact",
+          "squad": "APM Experience",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Investment Category",
+            "End of Definition Date",
+            "Health Status",
+            "Planned Release Date"
+          ]
+        },
+        {
+          "key": "PLAYER-161",
+          "summary": "Greece - implement Intelli (KYC Provider)",
+          "tribe": "Manage",
+          "squad": "Player Identity",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Start Date",
+            "Description / PRD",
+            "End of Definition Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-171",
+          "summary": "GR - AML - SEON continuos monitoring",
+          "tribe": "Manage",
+          "squad": "Player Identity",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Start Date",
+            "Description / PRD",
+            "End of Definition Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-216",
+          "summary": "Romanica RG UX Updates.",
+          "tribe": "Manage",
+          "squad": "Player Account",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Start Date",
+            "Description / PRD",
+            "End of Definition Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-253",
+          "summary": "Login Flow UI/UX Improvements",
+          "tribe": "Manage",
+          "squad": "Player Account",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Start Date",
+            "Description / PRD",
+            "End of Definition Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-1015",
+          "summary": "🇬🇷 Greece - Hypercare - Pamster",
+          "tribe": "Manage",
+          "squad": "Player Account",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Start Date",
+            "Description / PRD",
+            "End of Definition Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-73",
+          "summary": "Enabling Engagement P0 & P2 Metrics (% Targeted & Reward Source)",
+          "tribe": "Player Engagement",
+          "squad": "GraySkull (Bonus Platform)",
+          "score": 69,
+          "missing_count": 5,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "End of Definition Date",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-90",
+          "summary": "Greece:  XtremePush Setup and Configuration",
+          "tribe": "Player Engagement",
+          "squad": "GraySkull (Bonus Platform)",
+          "score": 69,
+          "missing_count": 5,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Start Date",
+            "End of Definition Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-104",
+          "summary": "Pragmatic Buy Bonus Rounds (RO Migration)",
+          "tribe": "Player Engagement",
+          "squad": "Engagement Integrations",
+          "score": 69,
+          "missing_count": 5,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "End of Definition Date",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-124",
+          "summary": "[2026 Q1] Test coverage",
+          "tribe": "Player Engagement",
+          "squad": "Loyalty",
+          "score": 69,
+          "missing_count": 5,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Description / PRD",
+            "End of Definition Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-151",
+          "summary": "Bonus balance page in the MyAccount page – fake door test",
+          "tribe": "Player Engagement",
+          "squad": "Player Experience - Growth",
+          "score": 69,
+          "missing_count": 5,
+          "missing": [
+            "Product Lead",
+            "Engineering Lead",
+            "Tribes Impacted",
+            "Health Status",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-908",
+          "summary": "Reduce Notification Delivery for Campaigns Going live or Rolling Over < 1 min",
+          "tribe": "Player Engagement",
+          "squad": "Engagement Platform",
+          "score": 69,
+          "missing_count": 5,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Description / PRD",
+            "End of Definition Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-861",
+          "summary": "Minimalist state and resilience - stretch",
+          "tribe": "Transact",
+          "squad": "Wallet Core",
+          "score": 69,
+          "missing_count": 5,
+          "missing": [
+            "Parent",
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Description / PRD",
+            "End of Definition Date"
+          ]
+        }
+      ],
+      "source": "backfill"
+    },
+    {
+      "run": 3,
+      "date": "2026-05-11",
+      "total": 429,
+      "with_gaps": 343,
+      "compliant": 86,
+      "avg_score": 77,
+      "gap_counts": {
+        "Parent": 98,
+        "Product Lead": 31,
+        "Engineering Lead": 33,
+        "Roadmap Priority": 50,
+        "Impact (PDT)": 263,
+        "Country (PDT)": 121,
+        "Areas Impacted": 11,
+        "Investment Category": 57,
+        "Start Date": 157,
+        "Description / PRD": 79,
+        "Tribes Impacted": 18,
+        "End of Definition Date": 236,
+        "Health Status": 59,
+        "Planned Release Date": 135,
+        "Short Status Update": 104,
+        "Due Date": 43
+      },
+      "tribes": {
+        "Player Engagement": {
+          "total": 136,
+          "avg_score": 79,
+          "with_gaps": 109,
+          "compliant": 27,
+          "gap_counts": {
+            "Parent": 15,
+            "Product Lead": 15,
+            "Engineering Lead": 26,
+            "Roadmap Priority": 8,
+            "Impact (PDT)": 91,
+            "Country (PDT)": 38,
+            "Areas Impacted": 2,
+            "Investment Category": 20,
+            "Start Date": 27,
+            "Description / PRD": 15,
+            "Tribes Impacted": 18,
+            "End of Definition Date": 81,
+            "Health Status": 21,
+            "Planned Release Date": 40,
+            "Short Status Update": 23,
+            "Due Date": 10
+          },
+          "squads": {
+            "Thundercats": {
+              "total": 13,
+              "avg_score": 88,
+              "with_gaps": 2,
+              "gap_counts": {
+                "Parent": 2,
+                "Product Lead": 2,
+                "Engineering Lead": 2,
+                "Roadmap Priority": 2,
+                "Impact (PDT)": 2,
+                "Country (PDT)": 2,
+                "Areas Impacted": 2,
+                "Start Date": 2,
+                "Tribes Impacted": 2,
+                "End of Definition Date": 2,
+                "Health Status": 2,
+                "Planned Release Date": 2,
+                "Due Date": 2
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-16",
+                  "summary": "Refer-a-Friend (RAF)",
+                  "score": 24,
+                  "missing": [
+                    "Parent",
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Areas Impacted",
+                    "Start Date",
+                    "Tribes Impacted",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-17",
+                  "summary": "Safe Guards: Limit Number of Opt-Ins & Kill Switch",
+                  "score": 24,
+                  "missing": [
+                    "Parent",
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Areas Impacted",
+                    "Start Date",
+                    "Tribes Impacted",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                }
+              ]
+            },
+            "Engagement Integrations": {
+              "total": 33,
+              "avg_score": 78,
+              "with_gaps": 31,
+              "gap_counts": {
+                "Parent": 2,
+                "Product Lead": 2,
+                "Engineering Lead": 2,
+                "Roadmap Priority": 2,
+                "Impact (PDT)": 31,
+                "Country (PDT)": 4,
+                "Investment Category": 7,
+                "Start Date": 7,
+                "Description / PRD": 3,
+                "Tribes Impacted": 3,
+                "End of Definition Date": 27,
+                "Health Status": 3,
+                "Planned Release Date": 14,
+                "Short Status Update": 8,
+                "Due Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-117",
+                  "summary": "Bragg Fuze Platform - Auto Payout",
+                  "score": 24,
+                  "missing": [
+                    "Parent",
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "Tribes Impacted",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-116",
+                  "summary": "FTP Integration Layer Onboarding + Integrate Hot Streaks for Poland [Hunch FTP]",
+                  "score": 41,
+                  "missing": [
+                    "Parent",
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Tribes Impacted",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1389",
+                  "summary": "Relax & P2 Sub Provider Free Spins",
+                  "score": 56,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1485",
+                  "summary": "Hunch - Passa a Bola game",
+                  "score": 56,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1483",
+                  "summary": "Hunch - Streak Game Serbia",
+                  "score": 62,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                }
+              ]
+            },
+            "GraySkull": {
+              "total": 24,
+              "avg_score": 74,
+              "with_gaps": 21,
+              "gap_counts": {
+                "Parent": 5,
+                "Product Lead": 4,
+                "Engineering Lead": 8,
+                "Roadmap Priority": 4,
+                "Impact (PDT)": 14,
+                "Country (PDT)": 12,
+                "Investment Category": 2,
+                "Start Date": 12,
+                "Description / PRD": 1,
+                "Tribes Impacted": 6,
+                "End of Definition Date": 14,
+                "Health Status": 7,
+                "Planned Release Date": 9,
+                "Due Date": 5
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-76",
+                  "summary": "Ops Efficiency #3: See Player’s Qualifying Bets",
+                  "score": 29,
+                  "missing": [
+                    "Parent",
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Tribes Impacted",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-77",
+                  "summary": "Safe Guards: Back Office Alerts",
+                  "score": 29,
+                  "missing": [
+                    "Parent",
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Tribes Impacted",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-81",
+                  "summary": "Journey Improvements",
+                  "score": 29,
+                  "missing": [
+                    "Parent",
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Tribes Impacted",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-78",
+                  "summary": "Returned Sports Bonus Funds (e.g. for Cashout Free Bets)",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-91",
+                  "summary": "Poland Migration Aftercare",
+                  "score": 41,
+                  "missing": [
+                    "Parent",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Tribes Impacted",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                }
+              ]
+            },
+            "No squad": {
+              "total": 2,
+              "avg_score": 49,
+              "with_gaps": 2,
+              "gap_counts": {
+                "Product Lead": 1,
+                "Engineering Lead": 1,
+                "Impact (PDT)": 2,
+                "Country (PDT)": 2,
+                "Investment Category": 1,
+                "Start Date": 2,
+                "Description / PRD": 2,
+                "End of Definition Date": 2,
+                "Health Status": 1,
+                "Planned Release Date": 1,
+                "Short Status Update": 1,
+                "Due Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-911",
+                  "summary": "80% Coverage of User Journeys for Engage",
+                  "score": 29,
+                  "missing": [
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-914",
+                  "summary": "BAU - Small Improvements & Tech Maintenance (Continuous)",
+                  "score": 69,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date"
+                  ]
+                }
+              ]
+            },
+            "Hunch (F2P)": {
+              "total": 9,
+              "avg_score": 58,
+              "with_gaps": 9,
+              "gap_counts": {
+                "Parent": 1,
+                "Engineering Lead": 7,
+                "Impact (PDT)": 9,
+                "Investment Category": 9,
+                "Start Date": 2,
+                "Description / PRD": 3,
+                "End of Definition Date": 8,
+                "Health Status": 6,
+                "Planned Release Date": 8,
+                "Short Status Update": 6
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1496",
+                  "summary": "Hunch - Toast messages on Streak game for better signposting (reduce CS)",
+                  "score": 50,
+                  "missing": [
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Investment Category",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1499",
+                  "summary": "Hunch - Money Heist game",
+                  "score": 50,
+                  "missing": [
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Investment Category",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1481",
+                  "summary": "Hunch - Coins & Free Spins as daily prizes on Streak games",
+                  "score": 53,
+                  "missing": [
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1500",
+                  "summary": "Hunch - Brazil Internal World Cup game",
+                  "score": 56,
+                  "missing": [
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Investment Category",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1501",
+                  "summary": "Hunch - Greece Internal World Cup game",
+                  "score": 56,
+                  "missing": [
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Investment Category",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                }
+              ]
+            },
+            "Loyalty": {
+              "total": 30,
+              "avg_score": 79,
+              "with_gaps": 30,
+              "gap_counts": {
+                "Parent": 5,
+                "Product Lead": 4,
+                "Engineering Lead": 4,
+                "Impact (PDT)": 26,
+                "Country (PDT)": 12,
+                "Start Date": 1,
+                "Description / PRD": 4,
+                "Tribes Impacted": 3,
+                "End of Definition Date": 22,
+                "Health Status": 1,
+                "Planned Release Date": 6,
+                "Short Status Update": 3,
+                "Due Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-120",
+                  "summary": "TBD/Archive/Other",
+                  "score": 53,
+                  "missing": [
+                    "Parent",
+                    "Start Date",
+                    "Description / PRD",
+                    "Tribes Impacted",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-121",
+                  "summary": "Finish Mission Development",
+                  "score": 53,
+                  "missing": [
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Description / PRD",
+                    "Tribes Impacted",
+                    "End of Definition Date",
+                    "Planned Release Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-127",
+                  "summary": "Unified Events Web",
+                  "score": 59,
+                  "missing": [
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Tribes Impacted",
+                    "End of Definition Date",
+                    "Planned Release Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1037",
+                  "summary": "Loyalty: Coin Debit Capability (enabling Hunch)",
+                  "score": 56,
+                  "missing": [
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1043",
+                  "summary": "Missions on Bet Confirmation Screen",
+                  "score": 56,
+                  "missing": [
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)"
+                  ]
+                }
+              ]
+            },
+            "Engagement Platform": {
+              "total": 7,
+              "avg_score": 70,
+              "with_gaps": 7,
+              "gap_counts": {
+                "Product Lead": 2,
+                "Engineering Lead": 2,
+                "Impact (PDT)": 7,
+                "Country (PDT)": 6,
+                "Investment Category": 1,
+                "Description / PRD": 1,
+                "End of Definition Date": 5,
+                "Short Status Update": 3
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-907",
+                  "summary": "Integration with Experimentation Platform",
+                  "score": 56,
+                  "missing": [
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)"
+                  ]
+                },
+                {
+                  "key": "PLAYER-909",
+                  "summary": "P0 Dashboard - Engagement",
+                  "score": 56,
+                  "missing": [
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)"
+                  ]
+                },
+                {
+                  "key": "PLAYER-908",
+                  "summary": "Reduce Notification Delivery for Campaigns Going live or Rolling Over < 1 min",
+                  "score": 75,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1065",
+                  "summary": "K8S Deployment Right Sizing",
+                  "score": 75,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "End of Definition Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1067",
+                  "summary": "Safeguard: Prevent Bonus Overawarding",
+                  "score": 75,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Investment Category",
+                    "End of Definition Date",
+                    "Short Status Update"
+                  ]
+                }
+              ]
+            },
+            "Player Experience - Growth": {
+              "total": 16,
+              "avg_score": 97,
+              "with_gaps": 6,
+              "gap_counts": {
+                "Start Date": 1,
+                "Description / PRD": 1,
+                "Tribes Impacted": 4,
+                "Health Status": 1,
+                "Short Status Update": 2
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1366",
+                  "summary": "Bottom Nav Bar New Design",
+                  "score": 88,
+                  "missing": [
+                    "Tribes Impacted",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-153",
+                  "summary": "PromoHub entry point in the top nav bar",
+                  "score": 88,
+                  "missing": [
+                    "Tribes Impacted",
+                    "Health Status"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1069",
+                  "summary": "Change the colour of the current PromoHub quicklink",
+                  "score": 88,
+                  "missing": [
+                    "Description / PRD",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-151",
+                  "summary": "Bonus balance page in the MyAccount page – fake door test",
+                  "score": 94,
+                  "missing": [
+                    "Tribes Impacted"
+                  ]
+                },
+                {
+                  "key": "PLAYER-61",
+                  "summary": "RAF v2 - Extend to Web and BR Launch",
+                  "score": 94,
+                  "missing": [
+                    "Start Date"
+                  ]
+                }
+              ]
+            },
+            "Retail Added Value Experience": {
+              "total": 1,
+              "avg_score": 94,
+              "with_gaps": 1,
+              "gap_counts": {
+                "End of Definition Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-22",
+                  "summary": "Phase 2 of migration from EPIC to Betler",
+                  "score": 94,
+                  "missing": [
+                    "End of Definition Date"
+                  ]
+                }
+              ]
+            },
+            "Fraud Engineering": {
+              "total": 1,
+              "avg_score": 100,
+              "with_gaps": 0,
+              "gap_counts": {},
+              "top_offenders": []
+            }
+          }
+        },
+        "Transact": {
+          "total": 82,
+          "avg_score": 70,
+          "with_gaps": 72,
+          "compliant": 10,
+          "gap_counts": {
+            "Parent": 35,
+            "Roadmap Priority": 31,
+            "Impact (PDT)": 59,
+            "Country (PDT)": 44,
+            "Investment Category": 4,
+            "Start Date": 28,
+            "Description / PRD": 17,
+            "End of Definition Date": 49,
+            "Health Status": 36,
+            "Planned Release Date": 40,
+            "Short Status Update": 42,
+            "Due Date": 18
+          },
+          "squads": {
+            "No squad": {
+              "total": 11,
+              "avg_score": 42,
+              "with_gaps": 11,
+              "gap_counts": {
+                "Parent": 11,
+                "Roadmap Priority": 11,
+                "Impact (PDT)": 11,
+                "Country (PDT)": 11,
+                "Start Date": 8,
+                "Description / PRD": 5,
+                "End of Definition Date": 11,
+                "Health Status": 11,
+                "Planned Release Date": 11,
+                "Short Status Update": 11,
+                "Due Date": 7
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-836",
+                  "summary": "Basic Traffic Routing Management (TRM)",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1093",
+                  "summary": "Tactic - New Pix Provider: OKTO",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1094",
+                  "summary": "Basic Traffic Routing Management (TRM) - BO",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1095",
+                  "summary": "Brazil Regulation",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-833",
+                  "summary": "IP - PL Migration - Ready for Migration/Launch",
+                  "score": 41,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                }
+              ]
+            },
+            "Payment Experience": {
+              "total": 8,
+              "avg_score": 57,
+              "with_gaps": 7,
+              "gap_counts": {
+                "Parent": 6,
+                "Roadmap Priority": 6,
+                "Impact (PDT)": 6,
+                "Country (PDT)": 6,
+                "Start Date": 5,
+                "Description / PRD": 1,
+                "End of Definition Date": 6,
+                "Health Status": 6,
+                "Planned Release Date": 6,
+                "Short Status Update": 6,
+                "Due Date": 4
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-849",
+                  "summary": "Existing Improvements - 2024",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-843",
+                  "summary": "Build our own Payment Experience in a scalable way",
+                  "score": 41,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-844",
+                  "summary": "Reduce Payment Cost in Romania",
+                  "score": 41,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-845",
+                  "summary": "Improve new user activation",
+                  "score": 41,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-842",
+                  "summary": "Q1 - Embed payments into journeys across the customer lifecycle",
+                  "score": 53,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                }
+              ]
+            },
+            "Wallet Core": {
+              "total": 17,
+              "avg_score": 76,
+              "with_gaps": 16,
+              "gap_counts": {
+                "Parent": 5,
+                "Roadmap Priority": 3,
+                "Impact (PDT)": 15,
+                "Country (PDT)": 8,
+                "Investment Category": 1,
+                "Start Date": 3,
+                "Description / PRD": 5,
+                "End of Definition Date": 9,
+                "Health Status": 3,
+                "Planned Release Date": 4,
+                "Short Status Update": 5,
+                "Due Date": 2
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-870",
+                  "summary": "Unsorted: To Check",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-873",
+                  "summary": "BR Regulatory Changes",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-858",
+                  "summary": "Cashout with Freebet",
+                  "score": 47,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-861",
+                  "summary": "Minimalist state and resilience - stretch",
+                  "score": 69,
+                  "missing": [
+                    "Parent",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-868",
+                  "summary": "Bulk Balance Management",
+                  "score": 71,
+                  "missing": [
+                    "Parent",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date"
+                  ]
+                }
+              ]
+            },
+            "APM Experience": {
+              "total": 10,
+              "avg_score": 71,
+              "with_gaps": 10,
+              "gap_counts": {
+                "Parent": 2,
+                "Roadmap Priority": 2,
+                "Impact (PDT)": 10,
+                "Country (PDT)": 5,
+                "Investment Category": 1,
+                "Start Date": 2,
+                "Description / PRD": 2,
+                "End of Definition Date": 6,
+                "Health Status": 5,
+                "Planned Release Date": 6,
+                "Short Status Update": 2,
+                "Due Date": 2
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1091",
+                  "summary": "OKTO PnP",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-856",
+                  "summary": "Second Backup Provider in Brazil - BTG",
+                  "score": 41,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-869",
+                  "summary": "CICO - Superbet Romania",
+                  "score": 62,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-867",
+                  "summary": "Altapay - Serbia",
+                  "score": 65,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-875",
+                  "summary": "Biometric PIX",
+                  "score": 69,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date"
+                  ]
+                }
+              ]
+            },
+            "Card Experience": {
+              "total": 8,
+              "avg_score": 87,
+              "with_gaps": 7,
+              "gap_counts": {
+                "Parent": 1,
+                "Roadmap Priority": 1,
+                "Impact (PDT)": 1,
+                "Country (PDT)": 1,
+                "Start Date": 7,
+                "End of Definition Date": 1,
+                "Health Status": 1,
+                "Planned Release Date": 1,
+                "Short Status Update": 1,
+                "Due Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-848",
+                  "summary": "Launch in-house Card journey in Betler",
+                  "score": 41,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-841",
+                  "summary": "Deposit on the Betslip - Brazil",
+                  "score": 90,
+                  "missing": [
+                    "Start Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-884",
+                  "summary": "Superbet Romania Migration",
+                  "score": 90,
+                  "missing": [
+                    "Start Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1124",
+                  "summary": "Cards - Data and Monitoring",
+                  "score": 90,
+                  "missing": [
+                    "Start Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-992",
+                  "summary": "Launch Redundant Cards journey in Betler",
+                  "score": 94,
+                  "missing": [
+                    "Start Date"
+                  ]
+                }
+              ]
+            },
+            "Wallet Integrations": {
+              "total": 9,
+              "avg_score": 76,
+              "with_gaps": 8,
+              "gap_counts": {
+                "Parent": 2,
+                "Roadmap Priority": 2,
+                "Impact (PDT)": 7,
+                "Country (PDT)": 4,
+                "Start Date": 2,
+                "Description / PRD": 2,
+                "End of Definition Date": 6,
+                "Health Status": 2,
+                "Planned Release Date": 2,
+                "Short Status Update": 5,
+                "Due Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-872",
+                  "summary": "IP - GR Market Entry [RAPTOR]",
+                  "score": 41,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-874",
+                  "summary": "Greece: Minimum Auditable Product (MAP)",
+                  "score": 53,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-862",
+                  "summary": "IP - Greece aftercare",
+                  "score": 69,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-866",
+                  "summary": "Greece: Taxation Compliance",
+                  "score": 76,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "End of Definition Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-878",
+                  "summary": "Greece: Market launch ",
+                  "score": 81,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date"
+                  ]
+                }
+              ]
+            },
+            "Cross Transact": {
+              "total": 1,
+              "avg_score": 47,
+              "with_gaps": 1,
+              "gap_counts": {
+                "Parent": 1,
+                "Impact (PDT)": 1,
+                "Country (PDT)": 1,
+                "Start Date": 1,
+                "End of Definition Date": 1,
+                "Health Status": 1,
+                "Planned Release Date": 1,
+                "Short Status Update": 1,
+                "Due Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-851",
+                  "summary": "FAME MMA Sponsorship Enablement and Support",
+                  "score": 47,
+                  "missing": [
+                    "Parent",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                }
+              ]
+            },
+            "Payment Platform": {
+              "total": 18,
+              "avg_score": 77,
+              "with_gaps": 12,
+              "gap_counts": {
+                "Parent": 7,
+                "Roadmap Priority": 6,
+                "Impact (PDT)": 8,
+                "Country (PDT)": 8,
+                "Investment Category": 2,
+                "Description / PRD": 2,
+                "End of Definition Date": 9,
+                "Health Status": 7,
+                "Planned Release Date": 9,
+                "Short Status Update": 11
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-864",
+                  "summary": "K6 Load testing",
+                  "score": 47,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-865",
+                  "summary": "Application Consolidation & Architectural Simplification",
+                  "score": 47,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-877",
+                  "summary": "Better alerting, metrics and dashboards in Payment Platform Squad",
+                  "score": 47,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-857",
+                  "summary": "Strategic Performance & Scalability (Market Readiness)",
+                  "score": 53,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-860",
+                  "summary": "Transparent Payment Lifecycle",
+                  "score": 53,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "Fraud Prevention": {
+          "total": 22,
+          "avg_score": 98,
+          "with_gaps": 2,
+          "compliant": 20,
+          "gap_counts": {
+            "Start Date": 2,
+            "Description / PRD": 1,
+            "End of Definition Date": 2,
+            "Short Status Update": 1
+          },
+          "squads": {
+            "Player Account": {
+              "total": 1,
+              "avg_score": 75,
+              "with_gaps": 1,
+              "gap_counts": {
+                "Start Date": 1,
+                "Description / PRD": 1,
+                "End of Definition Date": 1,
+                "Short Status Update": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1361",
+                  "summary": "🇷🇴 RO Betler - Fraud Integration",
+                  "score": 75,
+                  "missing": [
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Short Status Update"
+                  ]
+                }
+              ]
+            },
+            "Fraud Ops": {
+              "total": 5,
+              "avg_score": 98,
+              "with_gaps": 1,
+              "gap_counts": {
+                "Start Date": 1,
+                "End of Definition Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1180",
+                  "summary": "SEON Tableau dashboards",
+                  "score": 88,
+                  "missing": [
+                    "Start Date",
+                    "End of Definition Date"
+                  ]
+                }
+              ]
+            },
+            "Fraud Engineering": {
+              "total": 16,
+              "avg_score": 100,
+              "with_gaps": 0,
+              "gap_counts": {},
+              "top_offenders": []
+            }
+          }
+        },
+        "Manage": {
+          "total": 178,
+          "avg_score": 76,
+          "with_gaps": 153,
+          "compliant": 25,
+          "gap_counts": {
+            "Parent": 47,
+            "Product Lead": 15,
+            "Engineering Lead": 6,
+            "Roadmap Priority": 11,
+            "Impact (PDT)": 110,
+            "Country (PDT)": 38,
+            "Areas Impacted": 8,
+            "Investment Category": 32,
+            "Start Date": 96,
+            "Description / PRD": 46,
+            "End of Definition Date": 101,
+            "Health Status": 1,
+            "Planned Release Date": 53,
+            "Short Status Update": 37,
+            "Due Date": 14
+          },
+          "squads": {
+            "Player Account": {
+              "total": 53,
+              "avg_score": 66,
+              "with_gaps": 53,
+              "gap_counts": {
+                "Parent": 23,
+                "Product Lead": 1,
+                "Engineering Lead": 1,
+                "Roadmap Priority": 9,
+                "Impact (PDT)": 53,
+                "Country (PDT)": 24,
+                "Investment Category": 17,
+                "Start Date": 42,
+                "Description / PRD": 20,
+                "End of Definition Date": 40,
+                "Planned Release Date": 17,
+                "Short Status Update": 17,
+                "Due Date": 8
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-961",
+                  "summary": "Player site session management [iCORE]",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-963",
+                  "summary": "Bring all countries to Messenger sunshine ",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-964",
+                  "summary": "Zendesk Sunshine all markets",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-965",
+                  "summary": "Grow Belgium (Napoleon M2)",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-967",
+                  "summary": "Session Management Improvements",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                }
+              ]
+            },
+            "Player Support": {
+              "total": 18,
+              "avg_score": 66,
+              "with_gaps": 18,
+              "gap_counts": {
+                "Parent": 1,
+                "Roadmap Priority": 1,
+                "Impact (PDT)": 18,
+                "Country (PDT)": 9,
+                "Areas Impacted": 1,
+                "Investment Category": 13,
+                "Start Date": 14,
+                "Description / PRD": 3,
+                "End of Definition Date": 12,
+                "Health Status": 1,
+                "Planned Release Date": 6,
+                "Short Status Update": 8
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1403",
+                  "summary": "Provide the full context to CS agent",
+                  "score": 56,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1457",
+                  "summary": "Outbound communication for VIP players  - Bi-directional Chat",
+                  "score": 40,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Areas Impacted",
+                    "Investment Category"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1165",
+                  "summary": "🇷🇴 RO Betler -  Customer support readiness",
+                  "score": 62,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1290",
+                  "summary": "CS Bot - account recovery",
+                  "score": 62,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1293",
+                  "summary": "[TECH] Session attempts to be backed by snowflake",
+                  "score": 62,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Short Status Update"
+                  ]
+                }
+              ]
+            },
+            "Manage Platform": {
+              "total": 11,
+              "avg_score": 75,
+              "with_gaps": 11,
+              "gap_counts": {
+                "Parent": 1,
+                "Product Lead": 9,
+                "Impact (PDT)": 11,
+                "Country (PDT)": 3,
+                "Start Date": 1,
+                "Description / PRD": 1,
+                "End of Definition Date": 1,
+                "Planned Release Date": 1,
+                "Short Status Update": 1,
+                "Due Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-918",
+                  "summary": "Manage Platform External Requests",
+                  "score": 41,
+                  "missing": [
+                    "Parent",
+                    "Product Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-917",
+                  "summary": "Global - Phone verification SMS Improvements",
+                  "score": 67,
+                  "missing": [
+                    "Product Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)"
+                  ]
+                },
+                {
+                  "key": "PLAYER-919",
+                  "summary": "Session Management Improvements",
+                  "score": 67,
+                  "missing": [
+                    "Product Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1270",
+                  "summary": "RO Migration Support",
+                  "score": 78,
+                  "missing": [
+                    "Product Lead",
+                    "Impact (PDT)"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1273",
+                  "summary": "[Tech OKR] Improving Observability of 3rd party integrations",
+                  "score": 78,
+                  "missing": [
+                    "Product Lead",
+                    "Impact (PDT)"
+                  ]
+                }
+              ]
+            },
+            "No squad": {
+              "total": 3,
+              "avg_score": 58,
+              "with_gaps": 3,
+              "gap_counts": {
+                "Parent": 1,
+                "Product Lead": 1,
+                "Engineering Lead": 1,
+                "Impact (PDT)": 3,
+                "Country (PDT)": 2,
+                "Areas Impacted": 1,
+                "Investment Category": 2,
+                "Start Date": 2,
+                "End of Definition Date": 1,
+                "Planned Release Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-916",
+                  "summary": "Onboarding Verification Method Sequencing",
+                  "score": 56,
+                  "missing": [
+                    "Parent",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Planned Release Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1459",
+                  "summary": "🇬🇷 Greece NSE",
+                  "score": 50,
+                  "missing": [
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Areas Impacted",
+                    "Start Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1190",
+                  "summary": "Fiscal Printer Remote Operations",
+                  "score": 67,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category"
+                  ]
+                }
+              ]
+            },
+            "Player Onboarding": {
+              "total": 57,
+              "avg_score": 85,
+              "with_gaps": 40,
+              "gap_counts": {
+                "Parent": 20,
+                "Product Lead": 4,
+                "Engineering Lead": 4,
+                "Areas Impacted": 6,
+                "Start Date": 29,
+                "Description / PRD": 6,
+                "End of Definition Date": 35,
+                "Planned Release Date": 21,
+                "Short Status Update": 4,
+                "Due Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-188",
+                  "summary": "[Q42025] PO Observability Quality Cockpit Journeys",
+                  "score": 65,
+                  "missing": [
+                    "Parent",
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Planned Release Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-827",
+                  "summary": "[Q42025] Mobile Apps Enhancement",
+                  "score": 65,
+                  "missing": [
+                    "Parent",
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Planned Release Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-186",
+                  "summary": "[Q42025] Welcome offer banners on Registration",
+                  "score": 71,
+                  "missing": [
+                    "Parent",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-187",
+                  "summary": "[Q12026] BR - Okto Pay and Play Launch",
+                  "score": 71,
+                  "missing": [
+                    "Parent",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-197",
+                  "summary": "[Q42025] One question at time on Registration",
+                  "score": 71,
+                  "missing": [
+                    "Parent",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date"
+                  ]
+                }
+              ]
+            },
+            "Player Identity": {
+              "total": 35,
+              "avg_score": 85,
+              "with_gaps": 28,
+              "gap_counts": {
+                "Parent": 1,
+                "Roadmap Priority": 1,
+                "Impact (PDT)": 25,
+                "Start Date": 8,
+                "Description / PRD": 16,
+                "End of Definition Date": 12,
+                "Planned Release Date": 7,
+                "Short Status Update": 7,
+                "Due Date": 4
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-974",
+                  "summary": "Diagnostic Improvements",
+                  "score": 65,
+                  "missing": [
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Start Date",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1279",
+                  "summary": "sbClub - store new user data in betler once verified: API change required",
+                  "score": 69,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-166",
+                  "summary": "GR - New docs and granular category control  (cusdoc rewrite/refactor)",
+                  "score": 71,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-170",
+                  "summary": "GR - Expired Doc Flow (expiry, kyc refresh, kyc reminders)",
+                  "score": 71,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-175",
+                  "summary": "GR - SAN check on registration - block registration (SEON)",
+                  "score": 71,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                }
+              ]
+            },
+            "Payment Platform": {
+              "total": 1,
+              "avg_score": 100,
+              "with_gaps": 0,
+              "gap_counts": {},
+              "top_offenders": []
+            }
+          }
+        },
+        "Unassigned": {
+          "total": 1,
+          "avg_score": 33,
+          "with_gaps": 1,
+          "compliant": 0,
+          "gap_counts": {
+            "Product Lead": 1,
+            "Engineering Lead": 1,
+            "Impact (PDT)": 1,
+            "Country (PDT)": 1,
+            "Areas Impacted": 1,
+            "Investment Category": 1
+          },
+          "squads": {
+            "No squad": {
+              "total": 1,
+              "avg_score": 33,
+              "with_gaps": 1,
+              "gap_counts": {
+                "Product Lead": 1,
+                "Engineering Lead": 1,
+                "Impact (PDT)": 1,
+                "Country (PDT)": 1,
+                "Areas Impacted": 1,
+                "Investment Category": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1435",
+                  "summary": "QA- RO migration testing activities ",
+                  "score": 33,
+                  "missing": [
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Areas Impacted",
+                    "Investment Category"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "top_offenders": [
+        {
+          "key": "PLAYER-1496",
+          "summary": "Hunch - Toast messages on Streak game for better signposting (reduce CS)",
+          "tribe": "Player Engagement",
+          "squad": "Hunch (F2P)",
+          "score": 50,
+          "missing_count": 8,
+          "missing": [
+            "Engineering Lead",
+            "Impact (PDT)",
+            "Investment Category",
+            "Description / PRD",
+            "End of Definition Date",
+            "Health Status",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-1499",
+          "summary": "Hunch - Money Heist game",
+          "tribe": "Player Engagement",
+          "squad": "Hunch (F2P)",
+          "score": 50,
+          "missing_count": 8,
+          "missing": [
+            "Engineering Lead",
+            "Impact (PDT)",
+            "Investment Category",
+            "Description / PRD",
+            "End of Definition Date",
+            "Health Status",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-916",
+          "summary": "Onboarding Verification Method Sequencing",
+          "tribe": "Manage",
+          "squad": "No squad",
+          "score": 56,
+          "missing_count": 7,
+          "missing": [
+            "Parent",
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Investment Category",
+            "Start Date",
+            "End of Definition Date",
+            "Planned Release Date"
+          ]
+        },
+        {
+          "key": "PLAYER-1389",
+          "summary": "Relax & P2 Sub Provider Free Spins",
+          "tribe": "Player Engagement",
+          "squad": "Engagement Integrations",
+          "score": 56,
+          "missing_count": 7,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Investment Category",
+            "Start Date",
+            "End of Definition Date",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-1403",
+          "summary": "Provide the full context to CS agent",
+          "tribe": "Manage",
+          "squad": "Player Support",
+          "score": 56,
+          "missing_count": 7,
+          "missing": [
+            "Impact (PDT)",
+            "Investment Category",
+            "Start Date",
+            "End of Definition Date",
+            "Health Status",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-1485",
+          "summary": "Hunch - Passa a Bola game",
+          "tribe": "Player Engagement",
+          "squad": "Engagement Integrations",
+          "score": 56,
+          "missing_count": 7,
+          "missing": [
+            "Impact (PDT)",
+            "Investment Category",
+            "Start Date",
+            "End of Definition Date",
+            "Health Status",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-1500",
+          "summary": "Hunch - Brazil Internal World Cup game",
+          "tribe": "Player Engagement",
+          "squad": "Hunch (F2P)",
+          "score": 56,
+          "missing_count": 7,
+          "missing": [
+            "Engineering Lead",
+            "Impact (PDT)",
+            "Investment Category",
+            "End of Definition Date",
+            "Health Status",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-1501",
+          "summary": "Hunch - Greece Internal World Cup game",
+          "tribe": "Player Engagement",
+          "squad": "Hunch (F2P)",
+          "score": 56,
+          "missing_count": 7,
+          "missing": [
+            "Engineering Lead",
+            "Impact (PDT)",
+            "Investment Category",
+            "End of Definition Date",
+            "Health Status",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-1435",
+          "summary": "QA- RO migration testing activities ",
+          "tribe": "Unassigned",
+          "squad": "No squad",
+          "score": 33,
+          "missing_count": 6,
+          "missing": [
+            "Product Lead",
+            "Engineering Lead",
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Areas Impacted",
+            "Investment Category"
+          ]
+        },
+        {
+          "key": "PLAYER-1457",
+          "summary": "Outbound communication for VIP players  - Bi-directional Chat",
+          "tribe": "Manage",
+          "squad": "Player Support",
+          "score": 40,
+          "missing_count": 6,
+          "missing": [
+            "Parent",
+            "Roadmap Priority",
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Areas Impacted",
+            "Investment Category"
+          ]
+        },
+        {
+          "key": "PLAYER-233",
+          "summary": "🇵🇱 Poland RG Improvements - Web and Backend",
+          "tribe": "Manage",
+          "squad": "Player Account",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Parent",
+            "Impact (PDT)",
+            "Investment Category",
+            "Start Date",
+            "End of Definition Date",
+            "Planned Release Date"
+          ]
+        },
+        {
+          "key": "PLAYER-869",
+          "summary": "CICO - Superbet Romania",
+          "tribe": "Transact",
+          "squad": "APM Experience",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Investment Category",
+            "End of Definition Date",
+            "Health Status",
+            "Planned Release Date"
+          ]
+        },
+        {
+          "key": "PLAYER-1165",
+          "summary": "🇷🇴 RO Betler -  Customer support readiness",
+          "tribe": "Manage",
+          "squad": "Player Support",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Investment Category",
+            "Start Date",
+            "Description / PRD",
+            "End of Definition Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-1285",
+          "summary": "🇵🇱 RG Improvements - Mobile",
+          "tribe": "Manage",
+          "squad": "Player Account",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Parent",
+            "Impact (PDT)",
+            "Start Date",
+            "Description / PRD",
+            "End of Definition Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-1290",
+          "summary": "CS Bot - account recovery",
+          "tribe": "Manage",
+          "squad": "Player Support",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Investment Category",
+            "Start Date",
+            "End of Definition Date",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-1293",
+          "summary": "[TECH] Session attempts to be backed by snowflake",
+          "tribe": "Manage",
+          "squad": "Player Support",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Start Date",
+            "Description / PRD",
+            "End of Definition Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-1294",
+          "summary": "Chatbot (ultimate AI) - payment info - help with status & decline reasons",
+          "tribe": "Manage",
+          "squad": "Player Support",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Investment Category",
+            "Start Date",
+            "End of Definition Date",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-1308",
+          "summary": "[TCOM-128] Test Account Management",
+          "tribe": "Manage",
+          "squad": "Player Support",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Investment Category",
+            "Start Date",
+            "End of Definition Date",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        },
+        {
+          "key": "PLAYER-1482",
+          "summary": "Hunch - Coins & free spins as prizes on F2P Streak game leaderboards",
+          "tribe": "Player Engagement",
+          "squad": "Hunch (F2P)",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Engineering Lead",
+            "Impact (PDT)",
+            "Investment Category",
+            "Start Date",
+            "End of Definition Date",
+            "Planned Release Date"
+          ]
+        },
+        {
+          "key": "PLAYER-1483",
+          "summary": "Hunch - Streak Game Serbia",
+          "tribe": "Player Engagement",
+          "squad": "Engagement Integrations",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Investment Category",
+            "Start Date",
+            "End of Definition Date",
+            "Planned Release Date",
+            "Short Status Update"
+          ]
+        }
+      ],
+      "source": "build_reports"
+    },
+    {
+      "run": 7,
+      "date": "2026-05-18",
+      "total": 365,
+      "with_gaps": 296,
+      "compliant": 69,
+      "avg_score": 82,
+      "gap_counts": {
+        "Parent": 25,
+        "Product Lead": 19,
+        "Engineering Lead": 21,
+        "Roadmap Priority": 13,
+        "Impact (PDT)": 220,
+        "Country (PDT)": 59,
+        "Areas Impacted": 9,
+        "Investment Category": 19,
+        "Start Date": 95,
+        "Description / PRD": 65,
+        "Tribes Impacted": 12,
+        "End of Definition Date": 186,
+        "Health Status": 26,
+        "Planned Release Date": 78,
+        "Short Status Update": 6,
+        "Due Date": 32,
+        "Actual End Date": 95
+      },
+      "tribes": {
+        "Player Engagement": {
+          "total": 121,
+          "avg_score": 80,
+          "with_gaps": 104,
+          "compliant": 17,
+          "gap_counts": {
+            "Parent": 4,
+            "Product Lead": 8,
+            "Engineering Lead": 19,
+            "Roadmap Priority": 1,
+            "Impact (PDT)": 84,
+            "Country (PDT)": 31,
+            "Investment Category": 13,
+            "Start Date": 20,
+            "Description / PRD": 13,
+            "Tribes Impacted": 12,
+            "End of Definition Date": 74,
+            "Health Status": 14,
+            "Planned Release Date": 31,
+            "Short Status Update": 2,
+            "Due Date": 10,
+            "Actual End Date": 30
+          },
+          "squads": {
+            "GraySkull": {
+              "total": 21,
+              "avg_score": 77,
+              "with_gaps": 18,
+              "gap_counts": {
+                "Parent": 2,
+                "Product Lead": 1,
+                "Engineering Lead": 5,
+                "Roadmap Priority": 1,
+                "Impact (PDT)": 11,
+                "Country (PDT)": 9,
+                "Investment Category": 2,
+                "Start Date": 9,
+                "Description / PRD": 1,
+                "Tribes Impacted": 3,
+                "End of Definition Date": 11,
+                "Health Status": 4,
+                "Planned Release Date": 6,
+                "Due Date": 2,
+                "Actual End Date": 10
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-78",
+                  "summary": "Returned Sports Bonus Funds (e.g. for Cashout Free Bets)",
+                  "score": 29,
+                  "missing": [
+                    "Parent",
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-91",
+                  "summary": "Poland Migration Aftercare",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Tribes Impacted",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-86",
+                  "summary": "Safe Guards: Back Office Alerts - CRM Operator Alerting",
+                  "score": 53,
+                  "missing": [
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Tribes Impacted",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-72",
+                  "summary": "Eligible Casino Games Infrastructure Rework (Wager & Bonus Funds)",
+                  "score": 59,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Tribes Impacted",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-83",
+                  "summary": "VIP Management Tooling - VIP Player Summary (1st iteration)",
+                  "score": 65,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Actual End Date"
+                  ]
+                }
+              ]
+            },
+            "No squad": {
+              "total": 2,
+              "avg_score": 49,
+              "with_gaps": 2,
+              "gap_counts": {
+                "Product Lead": 1,
+                "Engineering Lead": 1,
+                "Impact (PDT)": 2,
+                "Country (PDT)": 2,
+                "Investment Category": 1,
+                "Start Date": 2,
+                "Description / PRD": 2,
+                "End of Definition Date": 2,
+                "Health Status": 1,
+                "Planned Release Date": 1,
+                "Due Date": 1,
+                "Actual End Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-911",
+                  "summary": "80% Coverage of User Journeys for Engage",
+                  "score": 29,
+                  "missing": [
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-914",
+                  "summary": "BAU - Small Improvements & Tech Maintenance (Continuous)",
+                  "score": 69,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date"
+                  ]
+                }
+              ]
+            },
+            "Loyalty": {
+              "total": 26,
+              "avg_score": 78,
+              "with_gaps": 26,
+              "gap_counts": {
+                "Parent": 1,
+                "Product Lead": 4,
+                "Engineering Lead": 4,
+                "Impact (PDT)": 26,
+                "Country (PDT)": 12,
+                "Description / PRD": 2,
+                "Tribes Impacted": 2,
+                "End of Definition Date": 20,
+                "Health Status": 1,
+                "Planned Release Date": 2,
+                "Short Status Update": 1,
+                "Actual End Date": 5
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-121",
+                  "summary": "Finish Mission Development",
+                  "score": 47,
+                  "missing": [
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Description / PRD",
+                    "Tribes Impacted",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-127",
+                  "summary": "Unified Events Web",
+                  "score": 53,
+                  "missing": [
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Tribes Impacted",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1037",
+                  "summary": "Loyalty: Coin Debit Capability (enabling Hunch)",
+                  "score": 50,
+                  "missing": [
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1043",
+                  "summary": "Missions on Bet Confirmation Screen",
+                  "score": 50,
+                  "missing": [
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)"
+                  ]
+                },
+                {
+                  "key": "PLAYER-124",
+                  "summary": "[2026 Q1] Test coverage",
+                  "score": 75,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date"
+                  ]
+                }
+              ]
+            },
+            "Engagement Platform": {
+              "total": 7,
+              "avg_score": 71,
+              "with_gaps": 7,
+              "gap_counts": {
+                "Product Lead": 2,
+                "Engineering Lead": 2,
+                "Impact (PDT)": 7,
+                "Country (PDT)": 6,
+                "Investment Category": 1,
+                "Description / PRD": 1,
+                "End of Definition Date": 5
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-907",
+                  "summary": "Integration with Experimentation Platform",
+                  "score": 50,
+                  "missing": [
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)"
+                  ]
+                },
+                {
+                  "key": "PLAYER-909",
+                  "summary": "P0 Dashboard - Engagement",
+                  "score": 50,
+                  "missing": [
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)"
+                  ]
+                },
+                {
+                  "key": "PLAYER-908",
+                  "summary": "Reduce Notification Delivery for Campaigns Going live or Rolling Over < 1 min",
+                  "score": 75,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-910",
+                  "summary": "Improve Product Support across player area",
+                  "score": 81,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "End of Definition Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1065",
+                  "summary": "K8S Deployment Right Sizing",
+                  "score": 81,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "End of Definition Date"
+                  ]
+                }
+              ]
+            },
+            "Hunch (F2P)": {
+              "total": 9,
+              "avg_score": 59,
+              "with_gaps": 9,
+              "gap_counts": {
+                "Parent": 1,
+                "Engineering Lead": 7,
+                "Impact (PDT)": 9,
+                "Investment Category": 9,
+                "Start Date": 2,
+                "Description / PRD": 3,
+                "End of Definition Date": 8,
+                "Health Status": 6,
+                "Planned Release Date": 8,
+                "Due Date": 2,
+                "Actual End Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1499",
+                  "summary": "Hunch - Money Heist game",
+                  "score": 50,
+                  "missing": [
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Investment Category",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1481",
+                  "summary": "Hunch - Coins & Free Spins as daily prizes on Streak games",
+                  "score": 53,
+                  "missing": [
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1482",
+                  "summary": "Hunch - Coins & free spins as prizes on F2P Streak game leaderboards",
+                  "score": 56,
+                  "missing": [
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1496",
+                  "summary": "Hunch - Toast messages on Streak game for better signposting (reduce CS)",
+                  "score": 56,
+                  "missing": [
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Investment Category",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1486",
+                  "summary": "Hunch - Add SGA upsells to Predictor games",
+                  "score": 62,
+                  "missing": [
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Investment Category",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date"
+                  ]
+                }
+              ]
+            },
+            "Engagement Integrations": {
+              "total": 31,
+              "avg_score": 81,
+              "with_gaps": 29,
+              "gap_counts": {
+                "Impact (PDT)": 29,
+                "Country (PDT)": 2,
+                "Start Date": 6,
+                "Description / PRD": 3,
+                "Tribes Impacted": 2,
+                "End of Definition Date": 27,
+                "Health Status": 1,
+                "Planned Release Date": 12,
+                "Due Date": 5,
+                "Actual End Date": 5
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1389",
+                  "summary": "Relax & P2 Sub Provider Free Spins",
+                  "score": 62,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1485",
+                  "summary": "Hunch - Passa a Bola game",
+                  "score": 62,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-112",
+                  "summary": "Relax & P1 Sub Provider Free Spins",
+                  "score": 65,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-115",
+                  "summary": "🇷🇴 Evolution Engagement Platform - Auto Payouts for Free Spins (Romania Migration)",
+                  "score": 69,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1494",
+                  "summary": "Hunch - Allow buy back in to Streaks using Coins",
+                  "score": 69,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                }
+              ]
+            },
+            "Player Experience - Growth": {
+              "total": 17,
+              "avg_score": 95,
+              "with_gaps": 8,
+              "gap_counts": {
+                "Start Date": 1,
+                "Description / PRD": 1,
+                "Tribes Impacted": 5,
+                "Health Status": 1,
+                "Planned Release Date": 1,
+                "Actual End Date": 5
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-153",
+                  "summary": "PromoHub entry point in the top nav bar",
+                  "score": 82,
+                  "missing": [
+                    "Tribes Impacted",
+                    "Health Status",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1367",
+                  "summary": "Logged Off user promotional ribbon ",
+                  "score": 88,
+                  "missing": [
+                    "Tribes Impacted",
+                    "Planned Release Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-61",
+                  "summary": "RAF v2 - Extend to Web and BR Launch",
+                  "score": 88,
+                  "missing": [
+                    "Start Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-154",
+                  "summary": "Add a red dot on the PromoHub in the MyAccount page",
+                  "score": 88,
+                  "missing": [
+                    "Tribes Impacted",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1069",
+                  "summary": "Change the colour of the current PromoHub quicklink",
+                  "score": 88,
+                  "missing": [
+                    "Description / PRD",
+                    "Actual End Date"
+                  ]
+                }
+              ]
+            },
+            "Thundercats": {
+              "total": 6,
+              "avg_score": 96,
+              "with_gaps": 3,
+              "gap_counts": {
+                "Planned Release Date": 1,
+                "Short Status Update": 1,
+                "Actual End Date": 2
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1072",
+                  "summary": "Improve Promo Hub: Filters & Tab (e.g. World Cup tab)",
+                  "score": 88,
+                  "missing": [
+                    "Planned Release Date",
+                    "Short Status Update"
+                  ]
+                },
+                {
+                  "key": "PLAYER-63",
+                  "summary": "Improve Promo Hub: Card Behaviour and Campaign History",
+                  "score": 94,
+                  "missing": [
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-913",
+                  "summary": "TECH: Push On Green: Daily web releases",
+                  "score": 94,
+                  "missing": [
+                    "Actual End Date"
+                  ]
+                }
+              ]
+            },
+            "Retail Added Value Experience": {
+              "total": 1,
+              "avg_score": 94,
+              "with_gaps": 1,
+              "gap_counts": {
+                "End of Definition Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-22",
+                  "summary": "Phase 2 of migration from EPIC to Betler",
+                  "score": 94,
+                  "missing": [
+                    "End of Definition Date"
+                  ]
+                }
+              ]
+            },
+            "Fraud Engineering": {
+              "total": 1,
+              "avg_score": 94,
+              "with_gaps": 1,
+              "gap_counts": {
+                "Actual End Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1024",
+                  "summary": "Direct integration of iCore to SEON for Payment journeys",
+                  "score": 94,
+                  "missing": [
+                    "Actual End Date"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "Transact": {
+          "total": 55,
+          "avg_score": 81,
+          "with_gaps": 42,
+          "compliant": 13,
+          "gap_counts": {
+            "Parent": 8,
+            "Roadmap Priority": 6,
+            "Impact (PDT)": 32,
+            "Country (PDT)": 17,
+            "Investment Category": 1,
+            "Start Date": 15,
+            "Description / PRD": 11,
+            "End of Definition Date": 24,
+            "Health Status": 10,
+            "Planned Release Date": 14,
+            "Due Date": 8,
+            "Actual End Date": 15
+          },
+          "squads": {
+            "APM Experience": {
+              "total": 8,
+              "avg_score": 72,
+              "with_gaps": 8,
+              "gap_counts": {
+                "Parent": 1,
+                "Roadmap Priority": 1,
+                "Impact (PDT)": 8,
+                "Country (PDT)": 4,
+                "Investment Category": 1,
+                "Start Date": 1,
+                "Description / PRD": 2,
+                "End of Definition Date": 4,
+                "Health Status": 4,
+                "Planned Release Date": 4,
+                "Due Date": 1,
+                "Actual End Date": 2
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1091",
+                  "summary": "OKTO PnP",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-867",
+                  "summary": "Altapay - Serbia",
+                  "score": 59,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-869",
+                  "summary": "CICO - Superbet Romania",
+                  "score": 62,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-875",
+                  "summary": "Biometric PIX",
+                  "score": 69,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-994",
+                  "summary": "Paysafecard Direct [Payment Portfoliop]",
+                  "score": 88,
+                  "missing": [
+                    "Impact (PDT)"
+                  ]
+                }
+              ]
+            },
+            "No squad": {
+              "total": 4,
+              "avg_score": 36,
+              "with_gaps": 4,
+              "gap_counts": {
+                "Parent": 4,
+                "Roadmap Priority": 4,
+                "Impact (PDT)": 4,
+                "Country (PDT)": 4,
+                "Start Date": 4,
+                "Description / PRD": 3,
+                "End of Definition Date": 4,
+                "Health Status": 4,
+                "Planned Release Date": 4,
+                "Due Date": 4,
+                "Actual End Date": 4
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1093",
+                  "summary": "Tactic - New Pix Provider: OKTO",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1094",
+                  "summary": "Basic Traffic Routing Management (TRM) - BO",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1095",
+                  "summary": "Brazil Regulation",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1092",
+                  "summary": "Tactic - Van Hecke Regulation",
+                  "score": 41,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date",
+                    "Actual End Date"
+                  ]
+                }
+              ]
+            },
+            "Card Experience": {
+              "total": 8,
+              "avg_score": 85,
+              "with_gaps": 7,
+              "gap_counts": {
+                "Parent": 1,
+                "Roadmap Priority": 1,
+                "Impact (PDT)": 1,
+                "Country (PDT)": 1,
+                "Start Date": 7,
+                "End of Definition Date": 1,
+                "Health Status": 1,
+                "Planned Release Date": 1,
+                "Due Date": 1,
+                "Actual End Date": 3
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-848",
+                  "summary": "Launch in-house Card journey in Betler",
+                  "score": 41,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-840",
+                  "summary": "Cards Platform Stability, Observability & Greece Optimisation",
+                  "score": 88,
+                  "missing": [
+                    "Start Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-850",
+                  "summary": "Nuvei V2 Migration",
+                  "score": 88,
+                  "missing": [
+                    "Start Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-884",
+                  "summary": "Superbet Romania Migration",
+                  "score": 89,
+                  "missing": [
+                    "Start Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1124",
+                  "summary": "Cards - Data and Monitoring",
+                  "score": 89,
+                  "missing": [
+                    "Start Date"
+                  ]
+                }
+              ]
+            },
+            "Wallet Integrations": {
+              "total": 7,
+              "avg_score": 85,
+              "with_gaps": 5,
+              "gap_counts": {
+                "Impact (PDT)": 5,
+                "Country (PDT)": 2,
+                "Start Date": 1,
+                "Description / PRD": 2,
+                "End of Definition Date": 4,
+                "Due Date": 1,
+                "Actual End Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-862",
+                  "summary": "IP - Greece aftercare",
+                  "score": 62,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-866",
+                  "summary": "Greece: Taxation Compliance",
+                  "score": 76,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "End of Definition Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-878",
+                  "summary": "Greece: Market launch ",
+                  "score": 81,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1013",
+                  "summary": "Wallet: Negative balance handling",
+                  "score": 88,
+                  "missing": [
+                    "Impact (PDT)",
+                    "End of Definition Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-946",
+                  "summary": "Greece hypercare/aftercare - Transact",
+                  "score": 88,
+                  "missing": [
+                    "Impact (PDT)"
+                  ]
+                }
+              ]
+            },
+            "Payment Platform": {
+              "total": 9,
+              "avg_score": 93,
+              "with_gaps": 3,
+              "gap_counts": {
+                "Impact (PDT)": 2,
+                "Country (PDT)": 1,
+                "Description / PRD": 1,
+                "End of Definition Date": 3,
+                "Health Status": 1,
+                "Planned Release Date": 2,
+                "Actual End Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-853",
+                  "summary": "Romania Migration: Scale and Ownership[Q1]",
+                  "score": 65,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-863",
+                  "summary": "Platform Stability and Scale: Sunset Payment Pipeline V1 [Q1]",
+                  "score": 81,
+                  "missing": [
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1006",
+                  "summary": "Scaling & Performance: Load testing of Wallet and Payment Pipelines",
+                  "score": 88,
+                  "missing": [
+                    "Impact (PDT)",
+                    "End of Definition Date"
+                  ]
+                }
+              ]
+            },
+            "Wallet Core": {
+              "total": 17,
+              "avg_score": 85,
+              "with_gaps": 14,
+              "gap_counts": {
+                "Parent": 2,
+                "Impact (PDT)": 12,
+                "Country (PDT)": 5,
+                "Start Date": 1,
+                "Description / PRD": 3,
+                "End of Definition Date": 8,
+                "Planned Release Date": 3,
+                "Due Date": 1,
+                "Actual End Date": 4
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-868",
+                  "summary": "Bulk Balance Management",
+                  "score": 65,
+                  "missing": [
+                    "Parent",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-861",
+                  "summary": "Minimalist state and resilience - stretch",
+                  "score": 69,
+                  "missing": [
+                    "Parent",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-859",
+                  "summary": "Segmented Boost Tokens",
+                  "score": 75,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-885",
+                  "summary": "🇷🇴 Non-KYC lifetime limit (MIGRATION)",
+                  "score": 75,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Planned Release Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-854",
+                  "summary": "BR tax reports",
+                  "score": 76,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "End of Definition Date",
+                    "Actual End Date"
+                  ]
+                }
+              ]
+            },
+            "Payment Experience": {
+              "total": 2,
+              "avg_score": 97,
+              "with_gaps": 1,
+              "gap_counts": {
+                "Start Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1136",
+                  "summary": "Micro Cashier",
+                  "score": 94,
+                  "missing": [
+                    "Start Date"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "Fraud Prevention": {
+          "total": 22,
+          "avg_score": 97,
+          "with_gaps": 9,
+          "compliant": 13,
+          "gap_counts": {
+            "Start Date": 1,
+            "Description / PRD": 1,
+            "End of Definition Date": 2,
+            "Actual End Date": 8
+          },
+          "squads": {
+            "Fraud Ops": {
+              "total": 5,
+              "avg_score": 94,
+              "with_gaps": 3,
+              "gap_counts": {
+                "Start Date": 1,
+                "End of Definition Date": 1,
+                "Actual End Date": 3
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1180",
+                  "summary": "SEON Tableau dashboards",
+                  "score": 82,
+                  "missing": [
+                    "Start Date",
+                    "End of Definition Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-258",
+                  "summary": "MFA on Login to be sticky",
+                  "score": 94,
+                  "missing": [
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-259",
+                  "summary": "Send email when a login is driven from a new device",
+                  "score": 94,
+                  "missing": [
+                    "Actual End Date"
+                  ]
+                }
+              ]
+            },
+            "Player Account": {
+              "total": 1,
+              "avg_score": 88,
+              "with_gaps": 1,
+              "gap_counts": {
+                "Description / PRD": 1,
+                "End of Definition Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1361",
+                  "summary": "🇷🇴 RO Betler - Fraud Integration",
+                  "score": 88,
+                  "missing": [
+                    "Description / PRD",
+                    "End of Definition Date"
+                  ]
+                }
+              ]
+            },
+            "Fraud Engineering": {
+              "total": 16,
+              "avg_score": 98,
+              "with_gaps": 5,
+              "gap_counts": {
+                "Actual End Date": 5
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-12",
+                  "summary": "Greece - Seon Integration for Fraud prevention customer journeys",
+                  "score": 94,
+                  "missing": [
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-13",
+                  "summary": "Cost Optimization - Optimize SEON Integration in Betler",
+                  "score": 94,
+                  "missing": [
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-14",
+                  "summary": "Betler - Establish ownership of Fraud services in Player",
+                  "score": 94,
+                  "missing": [
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-26",
+                  "summary": "ML Based Multi-Account Detection at Registration",
+                  "score": 94,
+                  "missing": [
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1182",
+                  "summary": "Betler Backoffice UI optimisation for Fraud & Risk",
+                  "score": 94,
+                  "missing": [
+                    "Actual End Date"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "Manage": {
+          "total": 156,
+          "avg_score": 81,
+          "with_gaps": 133,
+          "compliant": 23,
+          "gap_counts": {
+            "Parent": 13,
+            "Product Lead": 10,
+            "Engineering Lead": 2,
+            "Roadmap Priority": 6,
+            "Impact (PDT)": 101,
+            "Country (PDT)": 10,
+            "Areas Impacted": 8,
+            "Investment Category": 4,
+            "Start Date": 55,
+            "Description / PRD": 40,
+            "End of Definition Date": 83,
+            "Health Status": 1,
+            "Planned Release Date": 31,
+            "Short Status Update": 4,
+            "Due Date": 13,
+            "Actual End Date": 40
+          },
+          "squads": {
+            "Player Support": {
+              "total": 19,
+              "avg_score": 72,
+              "with_gaps": 19,
+              "gap_counts": {
+                "Parent": 2,
+                "Roadmap Priority": 2,
+                "Impact (PDT)": 19,
+                "Country (PDT)": 5,
+                "Areas Impacted": 1,
+                "Investment Category": 2,
+                "Start Date": 15,
+                "Description / PRD": 4,
+                "End of Definition Date": 13,
+                "Health Status": 1,
+                "Planned Release Date": 7,
+                "Due Date": 3,
+                "Actual End Date": 5
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-964",
+                  "summary": "Zendesk Sunshine all markets",
+                  "score": 35,
+                  "missing": [
+                    "Parent",
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Due Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1403",
+                  "summary": "Provide the full context to CS agent",
+                  "score": 62,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Health Status",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-239",
+                  "summary": "Betler - Backoffice Improvements",
+                  "score": 65,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-242",
+                  "summary": "Chatbot (ultimate AI) - Account information",
+                  "score": 65,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-243",
+                  "summary": "Complete Sushine Migration",
+                  "score": 65,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Actual End Date"
+                  ]
+                }
+              ]
+            },
+            "No squad": {
+              "total": 3,
+              "avg_score": 52,
+              "with_gaps": 3,
+              "gap_counts": {
+                "Parent": 1,
+                "Product Lead": 1,
+                "Engineering Lead": 1,
+                "Impact (PDT)": 3,
+                "Country (PDT)": 2,
+                "Areas Impacted": 1,
+                "Investment Category": 2,
+                "Start Date": 2,
+                "End of Definition Date": 1,
+                "Planned Release Date": 1,
+                "Due Date": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-916",
+                  "summary": "Onboarding Verification Method Sequencing",
+                  "score": 50,
+                  "missing": [
+                    "Parent",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1459",
+                  "summary": "🇬🇷 Greece NSE",
+                  "score": 44,
+                  "missing": [
+                    "Product Lead",
+                    "Engineering Lead",
+                    "Impact (PDT)",
+                    "Areas Impacted",
+                    "Start Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1190",
+                  "summary": "Fiscal Printer Remote Operations",
+                  "score": 62,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Investment Category"
+                  ]
+                }
+              ]
+            },
+            "Player Account": {
+              "total": 45,
+              "avg_score": 79,
+              "with_gaps": 45,
+              "gap_counts": {
+                "Roadmap Priority": 3,
+                "Impact (PDT)": 44,
+                "Country (PDT)": 1,
+                "Start Date": 18,
+                "Description / PRD": 18,
+                "End of Definition Date": 33,
+                "Planned Release Date": 8,
+                "Short Status Update": 1,
+                "Due Date": 3,
+                "Actual End Date": 16
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-965",
+                  "summary": "Grow Belgium (Napoleon M2)",
+                  "score": 47,
+                  "missing": [
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Due Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-961",
+                  "summary": "Player site session management [iCORE]",
+                  "score": 53,
+                  "missing": [
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Due Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-967",
+                  "summary": "Session Management Improvements",
+                  "score": 53,
+                  "missing": [
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Due Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-226",
+                  "summary": "TCOM-158 - 🇧🇷 BR Limits Update",
+                  "score": 65,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-245",
+                  "summary": "Belgium - ItsMe Login",
+                  "score": 65,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Actual End Date"
+                  ]
+                }
+              ]
+            },
+            "Player Onboarding": {
+              "total": 43,
+              "avg_score": 87,
+              "with_gaps": 28,
+              "gap_counts": {
+                "Parent": 9,
+                "Product Lead": 1,
+                "Engineering Lead": 1,
+                "Areas Impacted": 6,
+                "Start Date": 14,
+                "Description / PRD": 2,
+                "End of Definition Date": 24,
+                "Planned Release Date": 8,
+                "Short Status Update": 3,
+                "Due Date": 2,
+                "Actual End Date": 13
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1391",
+                  "summary": "[Q22026] AdHoc Requests, OutOfRoadmap",
+                  "score": 69,
+                  "missing": [
+                    "Areas Impacted",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Short Status Update",
+                    "Due Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-193",
+                  "summary": "[Q12026] Email templates for multiple brands in same domain for account activation and forget password",
+                  "score": 71,
+                  "missing": [
+                    "Parent",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-198",
+                  "summary": "[Q12026] Greece - Onboarding Improvements",
+                  "score": 71,
+                  "missing": [
+                    "Start Date",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-199",
+                  "summary": "[Q42025] Suggesting username based on email on registration",
+                  "score": 71,
+                  "missing": [
+                    "Parent",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-202",
+                  "summary": "[Q12026] [Tech] Migrate Betler registration from AWS Lambda to Erlang service",
+                  "score": 71,
+                  "missing": [
+                    "Parent",
+                    "Start Date",
+                    "End of Definition Date",
+                    "Planned Release Date",
+                    "Actual End Date"
+                  ]
+                }
+              ]
+            },
+            "Manage Platform": {
+              "total": 10,
+              "avg_score": 75,
+              "with_gaps": 10,
+              "gap_counts": {
+                "Product Lead": 8,
+                "Impact (PDT)": 10,
+                "Country (PDT)": 2
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-917",
+                  "summary": "Global - Phone verification SMS Improvements",
+                  "score": 62,
+                  "missing": [
+                    "Product Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)"
+                  ]
+                },
+                {
+                  "key": "PLAYER-919",
+                  "summary": "Session Management Improvements",
+                  "score": 62,
+                  "missing": [
+                    "Product Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1270",
+                  "summary": "RO Migration Support",
+                  "score": 75,
+                  "missing": [
+                    "Product Lead",
+                    "Impact (PDT)"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1273",
+                  "summary": "[Tech OKR] Improving Observability of 3rd party integrations",
+                  "score": 75,
+                  "missing": [
+                    "Product Lead",
+                    "Impact (PDT)"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1274",
+                  "summary": "[Tech OKR] Optimise production resource utilisation ",
+                  "score": 75,
+                  "missing": [
+                    "Product Lead",
+                    "Impact (PDT)"
+                  ]
+                }
+              ]
+            },
+            "Player Identity": {
+              "total": 35,
+              "avg_score": 85,
+              "with_gaps": 28,
+              "gap_counts": {
+                "Parent": 1,
+                "Roadmap Priority": 1,
+                "Impact (PDT)": 25,
+                "Start Date": 6,
+                "Description / PRD": 16,
+                "End of Definition Date": 12,
+                "Planned Release Date": 7,
+                "Due Date": 4,
+                "Actual End Date": 6
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-166",
+                  "summary": "GR - New docs and granular category control  (cusdoc rewrite/refactor)",
+                  "score": 65,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "Planned Release Date",
+                    "Due Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-170",
+                  "summary": "GR - Expired Doc Flow (expiry, kyc refresh, kyc reminders)",
+                  "score": 65,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "Planned Release Date",
+                    "Due Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-175",
+                  "summary": "GR - SAN check on registration - block registration (SEON)",
+                  "score": 65,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Start Date",
+                    "Description / PRD",
+                    "Planned Release Date",
+                    "Due Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-974",
+                  "summary": "Diagnostic Improvements",
+                  "score": 65,
+                  "missing": [
+                    "Roadmap Priority",
+                    "Impact (PDT)",
+                    "Start Date",
+                    "Planned Release Date",
+                    "Due Date",
+                    "Actual End Date"
+                  ]
+                },
+                {
+                  "key": "PLAYER-1279",
+                  "summary": "sbClub - store new user data in betler once verified: API change required",
+                  "score": 75,
+                  "missing": [
+                    "Impact (PDT)",
+                    "Description / PRD",
+                    "End of Definition Date",
+                    "Planned Release Date"
+                  ]
+                }
+              ]
+            },
+            "Payment Platform": {
+              "total": 1,
+              "avg_score": 100,
+              "with_gaps": 0,
+              "gap_counts": {},
+              "top_offenders": []
+            }
+          }
+        },
+        "Unassigned": {
+          "total": 1,
+          "avg_score": 38,
+          "with_gaps": 1,
+          "compliant": 0,
+          "gap_counts": {
+            "Product Lead": 1,
+            "Impact (PDT)": 1,
+            "Country (PDT)": 1,
+            "Areas Impacted": 1,
+            "Investment Category": 1
+          },
+          "squads": {
+            "No squad": {
+              "total": 1,
+              "avg_score": 38,
+              "with_gaps": 1,
+              "gap_counts": {
+                "Product Lead": 1,
+                "Impact (PDT)": 1,
+                "Country (PDT)": 1,
+                "Areas Impacted": 1,
+                "Investment Category": 1
+              },
+              "top_offenders": [
+                {
+                  "key": "PLAYER-1435",
+                  "summary": "QA- RO migration testing activities ",
+                  "score": 38,
+                  "missing": [
+                    "Product Lead",
+                    "Impact (PDT)",
+                    "Country (PDT)",
+                    "Areas Impacted",
+                    "Investment Category"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "top_offenders": [
+        {
+          "key": "PLAYER-916",
+          "summary": "Onboarding Verification Method Sequencing",
+          "tribe": "Manage",
+          "squad": "No squad",
+          "score": 50,
+          "missing_count": 8,
+          "missing": [
+            "Parent",
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Investment Category",
+            "Start Date",
+            "End of Definition Date",
+            "Planned Release Date",
+            "Due Date"
+          ]
+        },
+        {
+          "key": "PLAYER-1499",
+          "summary": "Hunch - Money Heist game",
+          "tribe": "Player Engagement",
+          "squad": "Hunch (F2P)",
+          "score": 50,
+          "missing_count": 8,
+          "missing": [
+            "Engineering Lead",
+            "Impact (PDT)",
+            "Investment Category",
+            "Description / PRD",
+            "End of Definition Date",
+            "Health Status",
+            "Planned Release Date",
+            "Due Date"
+          ]
+        },
+        {
+          "key": "PLAYER-1482",
+          "summary": "Hunch - Coins & free spins as prizes on F2P Streak game leaderboards",
+          "tribe": "Player Engagement",
+          "squad": "Hunch (F2P)",
+          "score": 56,
+          "missing_count": 7,
+          "missing": [
+            "Engineering Lead",
+            "Impact (PDT)",
+            "Investment Category",
+            "Start Date",
+            "End of Definition Date",
+            "Planned Release Date",
+            "Due Date"
+          ]
+        },
+        {
+          "key": "PLAYER-1496",
+          "summary": "Hunch - Toast messages on Streak game for better signposting (reduce CS)",
+          "tribe": "Player Engagement",
+          "squad": "Hunch (F2P)",
+          "score": 56,
+          "missing_count": 7,
+          "missing": [
+            "Engineering Lead",
+            "Impact (PDT)",
+            "Investment Category",
+            "Description / PRD",
+            "End of Definition Date",
+            "Health Status",
+            "Planned Release Date"
+          ]
+        },
+        {
+          "key": "PLAYER-862",
+          "summary": "IP - Greece aftercare",
+          "tribe": "Transact",
+          "squad": "Wallet Integrations",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Start Date",
+            "Description / PRD",
+            "End of Definition Date",
+            "Due Date"
+          ]
+        },
+        {
+          "key": "PLAYER-869",
+          "summary": "CICO - Superbet Romania",
+          "tribe": "Transact",
+          "squad": "APM Experience",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Investment Category",
+            "End of Definition Date",
+            "Health Status",
+            "Planned Release Date"
+          ]
+        },
+        {
+          "key": "PLAYER-1389",
+          "summary": "Relax & P2 Sub Provider Free Spins",
+          "tribe": "Player Engagement",
+          "squad": "Engagement Integrations",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Start Date",
+            "End of Definition Date",
+            "Planned Release Date",
+            "Due Date"
+          ]
+        },
+        {
+          "key": "PLAYER-1403",
+          "summary": "Provide the full context to CS agent",
+          "tribe": "Manage",
+          "squad": "Player Support",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Start Date",
+            "End of Definition Date",
+            "Health Status",
+            "Planned Release Date",
+            "Due Date"
+          ]
+        },
+        {
+          "key": "PLAYER-1485",
+          "summary": "Hunch - Passa a Bola game",
+          "tribe": "Player Engagement",
+          "squad": "Engagement Integrations",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Impact (PDT)",
+            "Start Date",
+            "End of Definition Date",
+            "Health Status",
+            "Planned Release Date",
+            "Due Date"
+          ]
+        },
+        {
+          "key": "PLAYER-1486",
+          "summary": "Hunch - Add SGA upsells to Predictor games",
+          "tribe": "Player Engagement",
+          "squad": "Hunch (F2P)",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Engineering Lead",
+            "Impact (PDT)",
+            "Investment Category",
+            "Description / PRD",
+            "End of Definition Date",
+            "Planned Release Date"
+          ]
+        },
+        {
+          "key": "PLAYER-1500",
+          "summary": "Hunch - Brazil Internal World Cup game",
+          "tribe": "Player Engagement",
+          "squad": "Hunch (F2P)",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Engineering Lead",
+            "Impact (PDT)",
+            "Investment Category",
+            "End of Definition Date",
+            "Health Status",
+            "Planned Release Date"
+          ]
+        },
+        {
+          "key": "PLAYER-1501",
+          "summary": "Hunch - Greece Internal World Cup game",
+          "tribe": "Player Engagement",
+          "squad": "Hunch (F2P)",
+          "score": 62,
+          "missing_count": 6,
+          "missing": [
+            "Engineering Lead",
+            "Impact (PDT)",
+            "Investment Category",
+            "End of Definition Date",
+            "Health Status",
+            "Planned Release Date"
+          ]
+        },
+        {
+          "key": "PLAYER-1435",
+          "summary": "QA- RO migration testing activities ",
+          "tribe": "Unassigned",
+          "squad": "No squad",
+          "score": 38,
+          "missing_count": 5,
+          "missing": [
+            "Product Lead",
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Areas Impacted",
+            "Investment Category"
+          ]
+        },
+        {
+          "key": "PLAYER-1459",
+          "summary": "🇬🇷 Greece NSE",
+          "tribe": "Manage",
+          "squad": "No squad",
+          "score": 44,
+          "missing_count": 5,
+          "missing": [
+            "Product Lead",
+            "Engineering Lead",
+            "Impact (PDT)",
+            "Areas Impacted",
+            "Start Date"
+          ]
+        },
+        {
+          "key": "PLAYER-115",
+          "summary": "🇷🇴 Evolution Engagement Platform - Auto Payouts for Free Spins (Romania Migration)",
+          "tribe": "Player Engagement",
+          "squad": "Engagement Integrations",
+          "score": 69,
+          "missing_count": 5,
+          "missing": [
+            "Impact (PDT)",
+            "Description / PRD",
+            "End of Definition Date",
+            "Planned Release Date",
+            "Due Date"
+          ]
+        },
+        {
+          "key": "PLAYER-861",
+          "summary": "Minimalist state and resilience - stretch",
+          "tribe": "Transact",
+          "squad": "Wallet Core",
+          "score": 69,
+          "missing_count": 5,
+          "missing": [
+            "Parent",
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Description / PRD",
+            "End of Definition Date"
+          ]
+        },
+        {
+          "key": "PLAYER-875",
+          "summary": "Biometric PIX",
+          "tribe": "Transact",
+          "squad": "APM Experience",
+          "score": 69,
+          "missing_count": 5,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "End of Definition Date",
+            "Health Status",
+            "Planned Release Date"
+          ]
+        },
+        {
+          "key": "PLAYER-914",
+          "summary": "BAU - Small Improvements & Tech Maintenance (Continuous)",
+          "tribe": "Player Engagement",
+          "squad": "No squad",
+          "score": 69,
+          "missing_count": 5,
+          "missing": [
+            "Impact (PDT)",
+            "Country (PDT)",
+            "Start Date",
+            "Description / PRD",
+            "End of Definition Date"
+          ]
+        },
+        {
+          "key": "PLAYER-1165",
+          "summary": "🇷🇴 RO Betler -  Customer support readiness",
+          "tribe": "Manage",
+          "squad": "Player Support",
+          "score": 69,
+          "missing_count": 5,
+          "missing": [
+            "Impact (PDT)",
+            "Start Date",
+            "Description / PRD",
+            "End of Definition Date",
+            "Due Date"
+          ]
+        },
+        {
+          "key": "PLAYER-1391",
+          "summary": "[Q22026] AdHoc Requests, OutOfRoadmap",
+          "tribe": "Manage",
+          "squad": "Player Onboarding",
+          "score": 69,
+          "missing_count": 5,
+          "missing": [
+            "Areas Impacted",
+            "End of Definition Date",
+            "Planned Release Date",
+            "Short Status Update",
+            "Due Date"
+          ]
+        }
+      ],
+      "source": "build_reports",
+      "data_fetched_at": "2026-05-18T16:19:57Z"
+    }
+  ]
+}

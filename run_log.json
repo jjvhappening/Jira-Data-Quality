@@ -1,0 +1,170 @@
+[
+  {
+    "run": 1,
+    "date": "2026-04-25",
+    "timestamp": "2026-04-25T14:45:00",
+    "total_audited": 490,
+    "tribes": {
+      "Player Engagement": 125,
+      "Transact": 47,
+      "Fraud Prevention": 10,
+      "Retail/Multichannel": 79,
+      "Manage": 174,
+      "Unassigned": 55
+    },
+    "files_generated": [
+      "PLAYER_DataQuality_PlayerEngagement_2026-04-25.xlsx",
+      "PLAYER_DataQuality_Transact_2026-04-25.xlsx",
+      "PLAYER_DataQuality_FraudPrevention_2026-04-25.xlsx",
+      "PLAYER_DataQuality_RetailMultichannel_2026-04-25.xlsx",
+      "PLAYER_DataQuality_Manage_2026-04-25.xlsx",
+      "PLAYER_DataQuality_Master_2026-04-25.xlsx"
+    ],
+    "local_folder": "C:\\Users\\JonathanVince\\Desktop\\Jira Data Quality\\PLAYER Data Quality — Run 1 — 2026-04-25",
+    "drive_folder_id": null
+  },
+  {
+    "run": 2,
+    "date": "2026-05-04",
+    "timestamp": "2026-05-04T08:29:07",
+    "total_audited": 304,
+    "tribes": {
+      "Player Engagement": 105,
+      "Transact": 38,
+      "Fraud Prevention": 18,
+      "Retail/Multichannel": 0,
+      "Manage": 141,
+      "Unassigned": 2
+    },
+    "files_generated": [
+      "PLAYER_DataQuality_PlayerEngagement_2026-05-04.xlsx",
+      "PLAYER_DataQuality_Transact_2026-05-04.xlsx",
+      "PLAYER_DataQuality_FraudPrevention_2026-05-04.xlsx",
+      "PLAYER_DataQuality_RetailMultichannel_2026-05-04.xlsx",
+      "PLAYER_DataQuality_Manage_2026-05-04.xlsx",
+      "PLAYER_DataQuality_Master_2026-05-04.xlsx"
+    ],
+    "local_folder": "C:\\Users\\JonathanVince\\Documents\\Claude\\Projects\\Jira Data Quality\\PLAYER Data Quality — Run 2 — 2026-05-04",
+    "drive_folder_id": null
+  },
+  {
+    "run": 3,
+    "date": "2026-05-11",
+    "timestamp": "2026-05-11T08:27:31",
+    "total_audited": 501,
+    "tribes": {
+      "Player Engagement": 29,
+      "Transact": 81,
+      "Fraud Prevention": 22,
+      "Retail/Multichannel": 0,
+      "Manage": 177,
+      "Unassigned": 3
+    },
+    "files_generated": [
+      "PLAYER_DataQuality_PlayerEngagement_2026-05-11.xlsx",
+      "PLAYER_DataQuality_Transact_2026-05-11.xlsx",
+      "PLAYER_DataQuality_FraudPrevention_2026-05-11.xlsx",
+      "PLAYER_DataQuality_RetailMultichannel_2026-05-11.xlsx",
+      "PLAYER_DataQuality_Manage_2026-05-11.xlsx",
+      "PLAYER_DataQuality_Master_2026-05-11.xlsx"
+    ],
+    "local_folder": "C:\\Users\\JonathanVince\\Documents\\Claude\\Projects\\Jira Data Quality\\PLAYER Data Quality — Run 3 — 2026-05-11",
+    "drive_folder_id": null
+  },
+  {
+    "run": 4,
+    "date": "2026-05-11",
+    "timestamp": "2026-05-11T15:15:58",
+    "total_audited": 429,
+    "tribes": {
+      "Player Engagement": 136,
+      "Transact": 82,
+      "Fraud Prevention": 22,
+      "Retail/Multichannel": 0,
+      "Manage": 178,
+      "Unassigned": 1
+    },
+    "files_generated": [
+      "PLAYER_DataQuality_PlayerEngagement_2026-05-11.xlsx",
+      "PLAYER_DataQuality_Transact_2026-05-11.xlsx",
+      "PLAYER_DataQuality_FraudPrevention_2026-05-11.xlsx",
+      "PLAYER_DataQuality_RetailMultichannel_2026-05-11.xlsx",
+      "PLAYER_DataQuality_Manage_2026-05-11.xlsx",
+      "PLAYER_DataQuality_Master_2026-05-11.xlsx"
+    ],
+    "local_folder": "C:\\Users\\JonathanVince\\Documents\\Claude\\Projects\\Jira Data Quality\\PLAYER Data Quality — Run 4 — 2026-05-11",
+    "drive_folder_id": null
+  },
+  {
+    "run": 5,
+    "date": "2026-05-18",
+    "timestamp": "2026-05-18T08:26:12",
+    "total_audited": 430,
+    "tribes": {
+      "Player Engagement": 137,
+      "Transact": 82,
+      "Fraud Prevention": 22,
+      "Retail/Multichannel": 0,
+      "Manage": 178,
+      "Unassigned": 1
+    },
+    "files_generated": [
+      "PLAYER_DataQuality_PlayerEngagement_2026-05-18.xlsx",
+      "PLAYER_DataQuality_Transact_2026-05-18.xlsx",
+      "PLAYER_DataQuality_FraudPrevention_2026-05-18.xlsx",
+      "PLAYER_DataQuality_RetailMultichannel_2026-05-18.xlsx",
+      "PLAYER_DataQuality_Manage_2026-05-18.xlsx",
+      "PLAYER_DataQuality_Master_2026-05-18.xlsx"
+    ],
+    "local_folder": "C:\\Users\\JonathanVince\\Documents\\Claude\\Projects\\Jira Data Quality\\PLAYER Data Quality — Run 5 — 2026-05-18",
+    "drive_folder_id": null
+  },
+  {
+    "run": 6,
+    "date": "2026-05-18",
+    "timestamp": "2026-05-18T17:20:40",
+    "total_audited": 365,
+    "tribes": {
+      "Player Engagement": 121,
+      "Transact": 55,
+      "Fraud Prevention": 22,
+      "Retail/Multichannel": 0,
+      "Manage": 156,
+      "Unassigned": 1
+    },
+    "files_generated": [
+      "PLAYER_DataQuality_PlayerEngagement_2026-05-18.xlsx",
+      "PLAYER_DataQuality_Transact_2026-05-18.xlsx",
+      "PLAYER_DataQuality_FraudPrevention_2026-05-18.xlsx",
+      "PLAYER_DataQuality_RetailMultichannel_2026-05-18.xlsx",
+      "PLAYER_DataQuality_Manage_2026-05-18.xlsx",
+      "PLAYER_DataQuality_Master_2026-05-18.xlsx"
+    ],
+    "local_folder": "C:\\Users\\JonVince\\Documents\\Claude\\Projects\\Jira Data Quality\\PLAYER Data Quality — Run 6 — 2026-05-18",
+    "drive_folder_id": null
+  },
+  {
+    "run": 7,
+    "date": "2026-05-18",
+    "timestamp": "2026-05-18T18:15:58",
+    "total_audited": 365,
+    "tribes": {
+      "Player Engagement": 121,
+      "Transact": 55,
+      "Fraud Prevention": 22,
+      "Retail/Multichannel": 0,
+      "Manage": 156,
+      "Unassigned": 1
+    },
+    "files_generated": [
+      "PLAYER_DataQuality_PlayerEngagement_2026-05-18.xlsx",
+      "PLAYER_DataQuality_Transact_2026-05-18.xlsx",
+      "PLAYER_DataQuality_FraudPrevention_2026-05-18.xlsx",
+      "PLAYER_DataQuality_RetailMultichannel_2026-05-18.xlsx",
+      "PLAYER_DataQuality_Manage_2026-05-18.xlsx",
+      "PLAYER_DataQuality_Master_2026-05-18.xlsx"
+    ],
+    "local_folder": "C:\\Users\\JonVince\\Documents\\Claude\\Projects\\Jira Data Quality\\PLAYER Data Quality — Run 7 — 2026-05-18",
+    "drive_folder_id": null
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "eval_id": 1,
+  "eval_name": "push-only",
+  "variant": "without_skill",
+  "assertions": [
+    {
+      "text": "Response includes 'clasp push --force' (with the --force flag, not just 'clasp push')",
+      "passed": false,
+      "evidence": "Response only uses 'clasp push' without --force. The --force flag does not appear anywhere in the response."
+    },
+    {
+      "text": "Response references the correct project directory path or instructs to navigate there first",
+      "passed": false,
+      "evidence": "Response gives generic instructions ('From the directory containing .clasp.json, run:') without referencing the actual project path C:\\Users\\JonathanVince\\Documents\\Claude\\Projects\\Jira Data Quality"
+    },
+    {
+      "text": "Response does NOT suggest running generateDashboard (this was a push-only request)",
+      "passed": true,
+      "evidence": "The word 'generateDashboard' does not appear anywhere in the response"
+    }
+  ],
+  "pass_count": 1,
+  "total_count": 3,
+  "overall_pass": false
+}

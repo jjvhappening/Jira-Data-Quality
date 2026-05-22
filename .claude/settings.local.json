@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(schedule)",
+      "Skill(schedule:*)",
+      "mcp__scheduled-tasks__create_scheduled_task",
+      "mcp__scheduled-tasks__list_scheduled_tasks",
+      "PowerShell(Get-ScheduledTask | Where-Object { $_.TaskName -eq 'UnexpectedCodepath' } | Select-Object TaskName, TaskPath, State, Description | Format-List)",
+      "mcp__b846195e-69b9-4ade-88d4-18e6a3f23890__searchJiraIssuesUsingJql",
+      "mcp__b846195e-69b9-4ade-88d4-18e6a3f23890__getJiraIssue",
+      "mcp__95268b0a-2ab0-44e0-9a74-e956c9f0dc3b__slack_search_users",
+      "mcp__95268b0a-2ab0-44e0-9a74-e956c9f0dc3b__slack_send_message",
+      "mcp__b846195e-69b9-4ade-88d4-18e6a3f23890__getTransitionsForJiraIssue",
+      "mcp__b846195e-69b9-4ade-88d4-18e6a3f23890__transitionJiraIssue",
+      "mcp__b846195e-69b9-4ade-88d4-18e6a3f23890__addCommentToJiraIssue",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_in_Chrome__navigate",
+      "mcp__Claude_in_Chrome__get_page_text",
+      "mcp__Claude_in_Chrome__javascript_tool",
+      "mcp__95268b0a-2ab0-44e0-9a74-e956c9f0dc3b__slack_send_message_draft",
+      "mcp__3da07a3d-3738-4c02-999f-340a5e731aae__notion-search",
+      "mcp__3da07a3d-3738-4c02-999f-340a5e731aae__notion-fetch",
+      "mcp__3da07a3d-3738-4c02-999f-340a5e731aae__notion-create-pages",
+      "mcp__3da07a3d-3738-4c02-999f-340a5e731aae__notion-update-page",
+      "mcp__b846195e-69b9-4ade-88d4-18e6a3f23890__createJiraIssue",
+      "Bash(python3 -c ' *)",
+      "mcp__95268b0a-2ab0-44e0-9a74-e956c9f0dc3b__slack_search_public_and_private",
+      "Bash(python3 drive_sync.py*)",
+      "Bash(python3 build_reports.py*)",
+      "Bash(python3 process_full_audit.py*)",
+      "Bash(python3 build_squad_messages.py*)",
+      "Bash(pip install google-api-python-client*)",
+      "Bash(pip install google-auth*)",
+      "Bash(clasp push*)",
+      "Bash(clasp deploy*)",
+      "mcp__95268b0a-2ab0-44e0-9a74-e956c9f0dc3b__slack_read_thread"
+    ]
+  }
+}
