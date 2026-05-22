@@ -46,8 +46,7 @@ _staleness = (
     f'Fields updated in Jira since then will appear in the next run._'
 ) if _age_hours > 48 else ''
 
-DASHBOARD = ('https://script.google.com/a/macros/super.xyz/s/'
-             'AKfycbz267VI_QpjOEoAR94h89sA1KJW3j3xmgk7IMK6nepNmoc8oQG7DS4ZxiBuZAr2DIaPgw/exec')
+DASHBOARD = 'https://jjvhappening.github.io/Jira-Data-Quality/'
 HANDBOOK = ('https://www.notion.so/superbet/'
             'HANDBOOK-Setting-up-Jira-for-P-T-Roadmapping-318032f852c58057a66ce19cf7a22d9e')
 

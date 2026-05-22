@@ -558,20 +558,16 @@ if not inconsistencies:
 else:
     print(f'  ⚠️  {len(inconsistencies)} inconsistent rows (see above)')
 
-# ── Sync trend_history.json to Drive ─────────────────────────────────────────
-# Python is the single source of truth for trend_history.json. This replaces the
-# Apps Script Excel-processing pipeline that previously caused score/missing mismatches.
-# drive_sync.py uses the existing clasp OAuth2 credentials (~/.clasprc.json).
-# Test credentials first: python drive_sync.py --test
-DRIVE_TREND_FILE_ID = '1hlDO1oo2YOT6BenZa9vqbWxBT0bRW2PA'
+# ── Push trend_history.json to GitHub ────────────────────────────────────────
+import subprocess as _sp
 try:
-    from drive_sync import upload_trend_history
-    upload_trend_history()
-except Exception as e:
-    print(f'\n  ⚠️  Drive sync failed — trend_history.json NOT updated online.')
+    _sp.run(['git', 'add', 'trend_history.json'], cwd=_SCRIPT_DIR, check=True)
+    _sp.run(['git', 'commit', '-m', f'Data: Run #{RUN_NUMBER} ({today})'], cwd=_SCRIPT_DIR, check=True)
+    _sp.run(['git', 'push'], cwd=_SCRIPT_DIR, check=True)
+    print('  ✓ trend_history.json pushed to GitHub — dashboard will update in ~30s')
+except _sp.CalledProcessError as e:
+    print(f'\n  ⚠️  Git push failed — trend_history.json NOT updated on GitHub.')
     print(f'      Error: {e}')
-    print(f'      Manual fallback: upload {TREND_FILE}')
-    print(f'      to Drive file ID: {DRIVE_TREND_FILE_ID}')
-    print(f'      (replace existing file — do not rename it)')
+    print(f'      Manual fallback: git add trend_history.json && git commit && git push')
 
 print('Done.')
