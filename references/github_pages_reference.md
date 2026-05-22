@@ -26,7 +26,7 @@ project: Jira Data Quality
 | `process_full_audit.py` | Fetches Jira data and writes audit_results.json |
 | `build_tribe_messages.py` | Generates tribe lead Slack messages (links to GitHub Pages dashboard) |
 | `build_squad_messages.py` | Generates squad EM Slack messages |
-| `mk_index.py` | One-time build script used to transform gas/gas_dashboard.html into index.html |
+| `backfill_history.py` | Manual utility to reconstruct trend_history entries from Excel exports if runs are missed |
 
 ## Run workflow (in order)
 
@@ -35,12 +35,10 @@ project: Jira Data Quality
 3. `python build_tribe_messages.py` — writes tribe_messages.json
 4. `python build_squad_messages.py` — writes squad_messages.json
 
-## Former Google Drive integration (superseded 2026-05-22)
+## Former Google Drive integration (fully removed 2026-05-22)
 
-Previously the dashboard was a Google Apps Script web app at:
-`https://script.google.com/a/macros/super.xyz/s/AKfycbz267VI_QpjOEoAR94h89sA1KJW3j3xmgk7IMK6nepNmoc8oQG7DS4ZxiBuZAr2DIaPgw/exec`
-
-`drive_sync.py` uploaded trend_history.json to Drive file ID `1hlDO1oo2YOT6BenZa9vqbWxBT0bRW2PA`.
-Both are now superseded. `drive_sync.py` remains in the repo but is no longer called.
+Previously the dashboard was a Google Apps Script web app served from Google Drive.
+The Google Drive folder and all GAS artifacts have been permanently deleted.
+There is no Google Drive dependency remaining anywhere in this project.
 
 Last updated: 2026-05-22
