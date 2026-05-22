@@ -2,7 +2,7 @@
 
 This workflow audits all active PLAYER Jira initiatives, notifies Squad and Tribe leads of gaps they need to fix, produces tribe-level Excel reports, and delivers data quality metrics to the PLAYER Data Quality Dashboard and Slack.
 
-**Key scripts** (all in `C:\Users\JonathanVince\Documents\Claude\Projects\Jira Data Quality\`):
+**Key scripts** (all in `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\`):
 - `process_full_audit.py` — merges paginated Jira results, applies tier scoring, maps squads→tribes, runs QC1. Outputs `audit_results.json`.
 - `build_reports.py` — reads `audit_results.json`, builds all 6 spreadsheets (5 tribe + 1 master) in one pass, writes run entry to `run_log.json`.
 
@@ -30,7 +30,7 @@ The spreadsheet generation (Steps 5–6) is handled entirely by the Python scrip
 
 > **Squad field fallback**: `process_full_audit.py` falls back to the native Jira Team field (`customfield_10001`) when the Squad custom field (`customfield_11250`) is empty. Team names with tribe suffixes (e.g. "Payment Platform - Transact") are normalised by stripping the suffix before lookup. Initiatives where neither field is set appear as `[No squad]` and need manual assignment in Jira.
 
-3. **Squad Lead / Tribe Lead identification** — Read from `C:\Users\JonathanVince\Documents\Claude\Projects\Jira Data Quality\squad_leads.json`. The Engineering Manager for each squad is the Slack message recipient. Tribe leads are under `tribe_leads` for each tribe. Slack IDs are pre-resolved — no Notion or Slack lookups required at runtime. If a squad has `engineering_manager: null`, skip the Slack message for that squad and note it in the final summary. To refresh the mapping, see `_meta.refresh_instructions` in the file.
+3. **Squad Lead / Tribe Lead identification** — Read from `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\squad_leads.json`. The Engineering Manager for each squad is the Slack message recipient. Tribe leads are under `tribe_leads` for each tribe. Slack IDs are pre-resolved — no Notion or Slack lookups required at runtime. If a squad has `engineering_manager: null`, skip the Slack message for that squad and note it in the final summary. To refresh the mapping, see `_meta.refresh_instructions` in the file.
 
    > **Mapping refresh prompt:** At the start of Run #5, and every 5 runs thereafter (Run #10, #15, …), remind Jonathan to review `squad_leads.json` against the Notion org page — new squads, EM changes, and TBH roles that have since been filled. Check `run_log.json` for the current run number to determine whether a prompt is due.
 
@@ -284,7 +284,7 @@ This is a new process and we're actively improving it — feedback and ideas are
 
 ### Step 5 — Build all spreadsheets
 
-Run `python build_reports.py` from the Jira Data Quality folder. It reads `audit_results.json` and produces all 6 xlsx files in one pass, then appends an entry to `run_log.json` and appends the run's compliance metrics to `trend_history.json` (the local copy used by the Apps Script trend dashboard).
+Run `python build_reports.py` from the Jira Data Quality folder. It reads `audit_results.json` and produces all 6 xlsx files in one pass, then appends an entry to `run_log.json` and appends the run's compliance metrics to `trend_history.json`, then commits and pushes it to GitHub so the dashboard updates automatically.
 
 **Tribe spreadsheets** (one per tribe) — two tabs each:
 - **Detail tab**: one row per initiative sorted by Compliance Score ascending. Columns: Compliance Score, Issue Key (hyperlinked), Initiative Name, Status, Squad, one column per required field (✓/✗).
@@ -301,7 +301,7 @@ File naming: `PLAYER_DataQuality_[TribeName]_[YYYY-MM-DD].xlsx` / `PLAYER_DataQu
 
 Immediately after `build_reports.py` completes, send a Slack DM to Jonathan confirming the run is done and the dashboard is live.
 
-> **No Drive upload required:** `build_reports.py` automatically uploads `trend_history.json` to Google Drive during its run — the PLAYER Data Quality Dashboard is already live with the new data. Proceeding to tribe messages does not require any manual confirmation.
+> **No manual step required:** `build_reports.py` automatically commits and pushes `trend_history.json` to GitHub during its run — the PLAYER Data Quality Dashboard is live within ~30 seconds. Proceeding to tribe messages does not require any manual confirmation.
 
 **Slack DM** (via `slack_send_message` to Jonathan's Slack ID `U08HBGPPRNY`):
 ```
@@ -317,9 +317,9 @@ The dashboard has been updated automatically. Proceeding to send tribe lead mess
 
 ### Step 6 — Proceed to tribe messages (no gate)
 
-> **Drive upload gate removed (2026-05-18):** `build_reports.py` now uploads `trend_history.json` directly to Drive during Step 5, so the PLAYER Data Quality Dashboard is always live after Step 5 completes. No manual Drive upload is required before sending tribe messages.
+> **Dashboard is live after Step 5:** `build_reports.py` commits and pushes `trend_history.json` to GitHub automatically — the dashboard updates within ~30 seconds. No manual action is required before sending tribe messages.
 
-The Excel tribe spreadsheets are saved locally in the run folder (`local_folder` in `run_log.json`). If Jonathan wants to upload them to Drive for stakeholder sharing, this is optional and can be done at any time — it does not gate Step 7 or Step 8.
+The Excel tribe spreadsheets are saved locally in the run folder (`local_folder` in `run_log.json`).
 
 **Proceed directly to Step 7.**
 
@@ -461,16 +461,15 @@ This ensures labels do not persist into the following week and become stale. The
 | `~/.claude/plugins/cache/local/player-jira/1.0.0/skills/player-jira-fix/SKILL.md` | Fix logic, valid field values, API formats |
 | `~/.claude/plugins/cache/local/player-jira/1.0.0/references/README.md` | Source-of-truth rules reference |
 | `~/.claude/plugins/installed_plugins.json` | Needs player-jira@local re-added |
-| `C:\Users\JonathanVince\Documents\Claude\Projects\Jira Data Quality\squad_leads.json` | Engineering Manager Slack IDs per squad and tribe — input for Steps 4–6. Refresh periodically from Notion page in `_meta.notion_page_url`. |
-| `C:\Users\JonathanVince\Documents\Claude\Projects\Jira Data Quality\process_full_audit.py` | Loads all paginated Jira result files, deduplicates, applies tier rules, maps squads→tribes, runs QC1A stratified sampling, runs QC1B coverage check. Outputs `audit_results.json`. |
-| `C:\Users\JonathanVince\Documents\Claude\Projects\Jira Data Quality\build_reports.py` | Reads `audit_results.json` and builds all output spreadsheets in a single pass: 5 tribe workbooks (Detail + Summary tabs each) and 1 master workbook (Overview, By Squad, By Field tabs). Single JSON load; all constants defined once. |
-| `C:\Users\JonathanVince\Documents\Claude\Projects\Jira Data Quality\audit_results.json` | Intermediate output from `process_full_audit.py`. Contains all 490 rows with per-field scores, tribe assignments, QC1 sample keys, and QC1B results. Input to `build_reports.py` and the Slack messaging step. |
-| `C:\Users\JonathanVince\Documents\Claude\Projects\Jira Data Quality\run_log.json` | Append-only log of every workflow run. Each entry stores run number, date, timestamp, total audited, per-tribe counts, and files generated. Written by `build_reports.py` at the end of each run. |
-| `C:\Users\JonathanVince\Documents\Claude\Projects\Jira Data Quality\trend_history.json` | Per-run compliance metrics (tribe + squad avg scores, gap counts, top offenders). Written by `build_reports.py`; uploaded to Drive so the Apps Script dashboard can read it. |
-| `C:\Users\JonathanVince\Documents\Claude\Projects\Jira Data Quality\backfill_history.py` | One-time utility: reads existing Run 1 & 2 tribe Excel Detail tabs and populates the initial `trend_history.json`. Only needed if you want a local copy including Run 1 data. |
-| `C:\Users\JonathanVince\Documents\Claude\Projects\Jira Data Quality\gas_Code.gs` | Google Apps Script source — paste into script.google.com. Handles Drive onChange trigger, Excel extraction, trend history updates, and dashboard HTML generation. |
-| `C:\Users\JonathanVince\Documents\Claude\Projects\Jira Data Quality\gas_dashboard.html` | HTML template for the Apps Script web app. Paste as an HTML file resource named `gas_dashboard` in the same Apps Script project. |
-| `C:\Users\JonathanVince\Documents\Claude\Projects\Jira Data Quality\references\Jira Roadmap Logic v2.md` | Field completion rules reference. Kept in sync with `~/.claude/plugins/cache/local/player-jira/1.0.0/references/README.md` (plugin file retains its README.md name as the skills reference it directly). If the plugin README changes, copy its content here and increment the version suffix. |
+| `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\squad_leads.json` | Engineering Manager Slack IDs per squad and tribe — input for Steps 4–6. Refresh periodically from Notion page in `_meta.notion_page_url`. |
+| `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\process_full_audit.py` | Loads all paginated Jira result files, deduplicates, applies tier rules, maps squads→tribes, runs QC1A stratified sampling, runs QC1B coverage check. Outputs `audit_results.json`. |
+| `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\build_reports.py` | Reads `audit_results.json` and builds all output spreadsheets in a single pass: 5 tribe workbooks (Detail + Summary tabs each) and 1 master workbook (Overview, By Squad, By Field tabs). Single JSON load; all constants defined once. |
+| `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\audit_results.json` | Intermediate output from `process_full_audit.py`. Contains all 490 rows with per-field scores, tribe assignments, QC1 sample keys, and QC1B results. Input to `build_reports.py` and the Slack messaging step. |
+| `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\run_log.json` | Append-only log of every workflow run. Each entry stores run number, date, timestamp, total audited, per-tribe counts, and files generated. Written by `build_reports.py` at the end of each run. |
+| `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\trend_history.json` | Per-run compliance metrics (tribe + squad avg scores, gap counts, top offenders). Written by `build_reports.py`, then committed and pushed to GitHub — the dashboard at https://jjvhappening.github.io/Jira-Data-Quality/ reads it directly. |
+| `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\index.html` | Static dashboard served by GitHub Pages — fetches trend_history.json client-side from the raw GitHub URL. |
+| `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\backfill_history.py` | One-time utility: reads existing tribe Excel Detail tabs and reconstructs `trend_history.json` entries. Only needed to recover missed runs. |
+| `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\references\Jira Roadmap Logic v2.md` | Field completion rules reference. Kept in sync with `~/.claude/plugins/cache/local/player-jira/1.0.0/references/README.md` (plugin file retains its README.md name as the skills reference it directly). If the plugin README changes, copy its content here and increment the version suffix. |
 
 ---
 
@@ -530,7 +529,7 @@ Apply a minimum of 8 and a maximum of N (audit all if N ≤ 20).
 
 **What the verifier checks for each sampled initiative:**
 
-1. **Field presence** — re-fetch from live Jira. For each field required at the initiative's status tier (per `C:\Users\JonathanVince\Documents\Claude\Projects\Jira Data Quality\references\Jira Roadmap Logic v2.md`), confirm Claude's missing/present assessment is correct. The verifier must read the rules file directly — do not re-derive the tier logic independently.
+1. **Field presence** — re-fetch from live Jira. For each field required at the initiative's status tier (per `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\references\Jira Roadmap Logic v2.md`), confirm Claude's missing/present assessment is correct. The verifier must read the rules file directly — do not re-derive the tier logic independently.
 
 2. **Score recalculation** — independently compute `fields_populated / fields_required × 100` and confirm it matches the reported compliance score (±1% tolerance for rounding).
 
