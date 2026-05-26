@@ -48,6 +48,8 @@ After every Jira response, write the `issues` array to a named file and discard 
 **2. Use sub-agents for heavy verification steps.**
 QC1A, QC3, and QC4 each spawn an isolated sub-agent. Pass only: the relevant file path(s), the sample or tribe name, and the rules reference path. Do not pass audit data inline. Sub-agents return a pass/fail verdict and a brief discrepancy list — that is all the main workflow needs to continue.
 
+> **Sub-agent scope constraint:** Every QC sub-agent prompt must end with: *"Do NOT invoke any skills (including iterative-improvement) or run any additional workflows after completing your verification. Return the PASS/FAIL verdict as your final message and stop."* Without this, a sub-agent will trigger the global iterative-improvement instruction from CLAUDE.md and return a tidy report instead of a QC verdict.
+
 **3. Checkpoint state after each major phase.**
 After each of the following, the workflow can safely restart from that point using only disk files:
 - Step 1 complete → `jira_a.json` … `jira_d.json` + `audit_results.json` written
@@ -101,11 +103,30 @@ customfield_11250,duedate,created
 | D — Done (p1) | `jira_d.json` |
 | Any page 2 | `jira_X_p2.json` (e.g. `jira_c_p2.json`) |
 
-After saving, invoke `process_full_audit.py` with `--audit` pointing to all audit files and `--qc1b` pointing to QC1B files:
+> **Multi-page merge — required when any query paginated:** `process_full_audit.py` aborts if any individual input file has exactly 100 records (the truncation guard). If a query ran to page 2 or beyond, you **cannot** pass the individual page files directly. Before invoking the script, merge all pages for that query into a single combined JSON file using an inline Python one-liner:
+>
+> ```python
+> import json
+> # Example for query C (Delivery) — adapt for query D (Done) if it also paginated
+> with open('jira_c.json') as f: c1 = json.load(f)
+> with open('jira_c_p2.json') as f: c2 = json.load(f)
+> # include jira_c_p3.json etc. if present
+> seen = set(); merged = []
+> for issue in c1 + c2:
+>     k = issue.get('key', issue.get('id',''))
+>     if k not in seen: seen.add(k); merged.append(issue)
+> with open('jira_c_all.json', 'w') as f: json.dump(merged, f)
+> ```
+>
+> Then pass the merged file instead: `jira_c_all.json` replaces `jira_c.json jira_c_p2.json` in the command. The same applies to query D if it paginated.
+
+After saving (and merging as needed), invoke `process_full_audit.py` with `--audit` pointing to all audit files and `--qc1b` pointing to QC1B files:
 
 ```
-python process_full_audit.py --audit jira_a.json jira_b.json jira_c.json jira_d.json --qc1b qc1b_p1.json qc1b_p2.json
+python process_full_audit.py --audit jira_a.json jira_b.json jira_c_all.json jira_d_all.json --qc1b qc1b_p1.json
 ```
+
+> If queries A or B also returned exactly 100 results and required further pages, substitute their merged files too. The example above assumes A and B each fit in one page.
 
 Full paths are not required if the script is run from the working directory. The script will raise `SystemExit` if any file returns exactly 100 records.
 
@@ -482,7 +503,7 @@ QC2 requires user confirmation (writes to Jira). All other data checks use a sep
 | QC1 | Step 1 — Audit complete | **Verifier sub-agent** | Two parallel checks: **QC1A** — statistically significant sample re-verified against live Jira, score recalculation checked, tier gating confirmed. **QC1B** — coverage check via Areas Impacted query to catch any PLAYER initiatives missed by the main audit. Full detail below. |
 | QC2 | Step 2 — Claude-fix preview | **Deferred — does not block workflow** | Claude saves the full fix proposal to a file and sends Jonathan a Slack message with the list. The main workflow continues immediately (audit, notifications, spreadsheets). Jonathan triggers the fixes separately when ready using: `"Apply player-jira fixes"` |
 | QC3 | Step 5 — Spreadsheets built | **Verifier sub-agent — mandatory, blocks Step 7** | Picks one tribe spreadsheet, re-fetches Jira data for that tribe, and checks: compliance scores are correct, hyperlinks resolve, sort order is correct, row count matches audit. Workflow does not proceed to Slack until this passes. |
-| QC4 | Step 5 — Master spreadsheet | **Verifier sub-agent** | Confirms Overview tab tribe totals match the sum of tribe-level spreadsheet data. Flags any mismatch. |
+| QC4 | Step 5 — Master spreadsheet | **Verifier sub-agent** | Confirms Overview tab tribe totals and avg scores match the tribe-level spreadsheets (±2pt rounding). **By Field tab note:** By Field counts all rows in `audit_results.json` — including any Unassigned initiatives — so its counts will be slightly higher than the sum of the 5 tribe Detail tabs. This is expected and not a failure. Only flag if the discrepancy is larger than the Unassigned row count. |
 | QC5 | ~~Step 6 — Drive upload~~ | ~~Manual confirmation~~ | _Removed 2026-05-18 — `build_reports.py` auto-uploads `trend_history.json`; Excel upload to Drive is optional and does not gate Slack messages._ |
 
 ---

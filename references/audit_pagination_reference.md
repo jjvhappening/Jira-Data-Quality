@@ -7,7 +7,7 @@ project: Jira Data Quality
 
 # Audit Pagination Reference
 
-Last updated: 2026-05-18
+Last updated: 2026-05-26
 
 ---
 
@@ -15,12 +15,30 @@ Last updated: 2026-05-18
 
 The script aborts if **any single audit file contains exactly 100 results**, treating it as a truncation signal. This fires even when subsequent pages are already included in the `--audit` file list.
 
-**Workaround:** Pre-merge all paginated files for each query into a single JSON list before passing to the script. Use `merge_tool_results.py` (or equivalent) to read the tool-result `.txt` files, extract the `issues` arrays, deduplicate by key, and write a merged list. Then pass the merged file — it won't trigger the check.
+**Workaround:** Pre-merge all paginated files for each query into a single JSON list before passing to the script. Use the inline Python snippet below — no separate merge script is needed.
 
-```bash
-python merge_tool_results.py
-python process_full_audit.py --audit jira_audit_merged.json --qc1b qc1b_merged.json
+```python
+import json
+
+# Merge all Delivery pages into jira_c_all.json
+with open('jira_c.json') as f: c1 = json.load(f)
+with open('jira_c_p2.json') as f: c2 = json.load(f)
+# add jira_c_p3.json etc. if present
+seen = set(); merged = []
+for issue in c1 + c2:
+    k = issue.get('key', issue.get('id',''))
+    if k not in seen: seen.add(k); merged.append(issue)
+with open('jira_c_all.json', 'w') as f: json.dump(merged, f)
+
+# Repeat for Done pages → jira_d_all.json if query D also paginated
 ```
+
+Then pass the merged files:
+```bash
+python process_full_audit.py --audit jira_a.json jira_b.json jira_c_all.json jira_d_all.json --qc1b qc1b_p1.json
+```
+
+**Run #8 example (2026-05-26):** jira_c had 3 pages (100+100+12=212 issues → `jira_c_all.json`), jira_d had 2 pages (100+11=111 → `jira_d_all.json`). Total audited after merge: 362.
 
 ---
 

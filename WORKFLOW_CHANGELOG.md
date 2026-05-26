@@ -4,6 +4,41 @@ All changes to workflow scripts, skill definitions, and configuration files. Mos
 
 ---
 
+## 2026-05-26 (Run #8)
+
+### `player-jira-data-quality-workflow.md` — Multi-page merge step added to Step 1
+**Why:** In Run #8, queries C (Delivery) and D (Done) each paginated across 3 and 2 pages respectively. Individual page files had exactly 100 records, triggering the `process_full_audit.py` SystemExit safety check. The workflow lacked an explicit merge step.
+
+**Changes:**
+- Added a merge callout before the `process_full_audit.py` command — shows the Python one-liner to deduplicate and combine `jira_c.json` + `jira_c_p2.json` etc. into `jira_c_all.json`
+- Updated the example command to use `jira_c_all.json` and `jira_d_all.json` instead of individual page files
+- `references/audit_pagination_reference.md`: replaced reference to non-existent `merge_tool_results.py` with the actual inline Python approach; added Run #8 example
+
+---
+
+### `player-jira-data-quality-workflow.md` — QC sub-agent scope constraint added
+**Why:** In Run #8, the QC1A Half 1 sub-agent triggered the global iterative-improvement instruction from CLAUDE.md and returned a folder tidy report instead of a QC verdict. No PASS/FAIL was received from Half 1.
+
+**Changes:**
+- Added a sub-agent scope constraint callout in the Context Management section: every QC sub-agent prompt must end with "Do NOT invoke any skills including iterative-improvement — return verdict and stop"
+
+---
+
+### `player-jira-data-quality-workflow.md` — QC4 By Field scope clarified
+**Why:** QC4 sub-agent flagged a By Field count mismatch (master By Field > sum of 5 tribe tabs). This is expected by design — By Field covers all rows including Unassigned. The QC4 table entry was ambiguous.
+
+**Changes:**
+- QC4 description updated: explicitly notes that By Field tab includes Unassigned rows and a small surplus equal to the Unassigned count is expected and not a failure
+
+---
+
+### `references/qc_known_bugs.md` — BUG-001 documented (customfield_12180)
+**Why:** QC1A Run #8 Half 2 found that `customfield_12180` (Actual End Date) always reads as False for Done-status initiatives even when populated in live Jira. Caused QC1A formal FAIL (12.8% discrepancy, all from one root cause).
+
+**Status:** Fix needed in `process_full_audit.py` — see bug file for diagnostic steps.
+
+---
+
 ## 2026-05-18
 
 ### `build_tribe_messages.py` — new script; tribe messages now automated
