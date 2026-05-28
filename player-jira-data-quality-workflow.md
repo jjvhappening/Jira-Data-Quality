@@ -1,16 +1,16 @@
 # Context
 
-This workflow audits all active PLAYER Jira initiatives, notifies Squad and Tribe leads of gaps they need to fix, produces tribe-level Excel reports, and delivers data quality metrics to the PLAYER Data Quality Dashboard and Slack.
+This workflow audits all active PLAYER Jira initiatives, notifies Squad and Tribe leads of gaps they need to fix, and delivers data quality metrics to the PLAYER Data Quality Dashboard and Slack.
 
 **Key scripts** (all in `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\`):
 - `process_full_audit.py` — merges paginated Jira results, applies tier scoring, maps squads→tribes, runs QC1. Outputs `audit_results.json`.
-- `build_reports.py` — reads `audit_results.json`, builds all 6 spreadsheets (5 tribe + 1 master) in one pass, writes run entry to `run_log.json`.
+- `build_reports.py` — reads `audit_results.json`, appends run metrics to `run_log.json` and `trend_history.json`, commits and pushes to GitHub.
 
 **Claude skills** (from the `player-jira@local` plugin — registered in `~/.claude/plugins/installed_plugins.json`, cached at `~/.claude/plugins/cache/local/player-jira/1.0.0/`):
 - `/player-jira-audit` — invoked at Step 1 to fetch all active PLAYER initiatives from Jira
 - `/player-jira-fix` — invoked at Step 2 to apply Claude-fixable rules (Backlog promotion, clear release date, auto status update)
 
-The spreadsheet generation (Steps 5–6) is handled entirely by the Python scripts — no skill invocation required.
+Steps 5–6 are handled entirely by the Python scripts — no skill invocation required.
 
 ---
 
@@ -46,15 +46,14 @@ This workflow is long. Interruptions (connectivity loss, compaction) are disrupt
 After every Jira response, write the `issues` array to a named file and discard the raw JSON from context. The Python scripts are the analysis engine — Claude's role is orchestration, not data processing. Never quote or re-summarise raw Jira data mid-workflow.
 
 **2. Use sub-agents for heavy verification steps.**
-QC1A, QC3, and QC4 each spawn an isolated sub-agent. Pass only: the relevant file path(s), the sample or tribe name, and the rules reference path. Do not pass audit data inline. Sub-agents return a pass/fail verdict and a brief discrepancy list — that is all the main workflow needs to continue.
+QC1A and QC4 each spawn an isolated sub-agent. Pass only: the relevant file path(s), the sample or tribe name, and the rules reference path. Do not pass audit data inline. Sub-agents return a pass/fail verdict and a brief discrepancy list — that is all the main workflow needs to continue.
 
 > **Sub-agent scope constraint:** Every QC sub-agent prompt must end with: *"Do NOT invoke any skills (including iterative-improvement) or run any additional workflows after completing your verification. Return the PASS/FAIL verdict as your final message and stop."* Without this, a sub-agent will trigger the global iterative-improvement instruction from CLAUDE.md and return a tidy report instead of a QC verdict.
 
 **3. Checkpoint state after each major phase.**
 After each of the following, the workflow can safely restart from that point using only disk files:
 - Step 1 complete → `jira_a.json` … `jira_d.json` + `audit_results.json` written
-- Step 5 complete → spreadsheets written + `run_log.json` updated
-- Step 6 (optional) → Excel spreadsheets available locally; upload to Drive for stakeholder sharing at any time
+- Step 5 complete → `trend_history.json` + `run_log.json` updated, dashboard live on GitHub Pages
 
 If the conversation is compacted between phases, read the relevant output files to reconstruct state. Do not re-fetch from Jira unless `audit_results.json` is missing or stale.
 
@@ -174,7 +173,7 @@ Example preview:
 
 **Description / PRD rule:** Tier 2 requires either `description` OR `customfield_12128` (Product Requirement document) to be populated. If either field has content, this gap is considered resolved — only flag if **both** are empty.
 
-**Retail/Multichannel exclusion rules:** Retail squads only adopted Jira in April 2026. A Retail/Multichannel initiative is **excluded entirely** from the audit (not scored, not included in any spreadsheet, not sent to Tomislav) if **either** of the following is true:
+**Retail/Multichannel exclusion rules:** Retail squads only adopted Jira in April 2026. A Retail/Multichannel initiative is **excluded entirely** from the audit (not scored, not included in the audit output, not sent to Tomislav) if **either** of the following is true:
 - Its `created` date is before `2026-04-01` — these items predate the process entirely.
 - Its status is `Done` — there is no value in flagging data quality gaps on completed work while the team is still new to the process.
 
@@ -303,20 +302,9 @@ _Action: close these initiatives in Jira._
 This is a new process and we're actively improving it — feedback and ideas are very welcome.
 ```
 
-### Step 5 — Build all spreadsheets
+### Step 5 — Build run reports
 
-Run `python build_reports.py` from the Jira Data Quality folder. It reads `audit_results.json` and produces all 6 xlsx files in one pass, then appends an entry to `run_log.json` and appends the run's compliance metrics to `trend_history.json`, then commits and pushes it to GitHub so the dashboard updates automatically.
-
-**Tribe spreadsheets** (one per tribe) — two tabs each:
-- **Detail tab**: one row per initiative sorted by Compliance Score ascending. Columns: Compliance Score, Issue Key (hyperlinked), Initiative Name, Status, Squad, one column per required field (✓/✗).
-- **Summary tab**: one row per squad — squad name, total initiatives, avg compliance score, gap counts per field, hyperlinked JQL.
-
-**Master spreadsheet** — three tabs:
-- **Overview**: one row per tribe — avg score, total initiatives, total gaps, % complete by field
-- **By Squad**: one row per squad across all tribes — sorted by compliance score ascending
-- **By Field**: gap frequency across all PLAYER sorted by most common
-
-File naming: `PLAYER_DataQuality_[TribeName]_[YYYY-MM-DD].xlsx` / `PLAYER_DataQuality_Master_[YYYY-MM-DD].xlsx`
+Run `python build_reports.py` from the Jira Data Quality folder. It reads `audit_results.json`, appends a run entry to `run_log.json`, appends compliance metrics to `trend_history.json`, then commits and pushes to GitHub so the dashboard updates automatically.
 
 ### Step 5b — Notify Jonathan that the run is complete
 
@@ -328,10 +316,9 @@ Immediately after `build_reports.py` completes, send a Slack DM to Jonathan conf
 ```
 📊 PLAYER Data Quality — Run #[N] complete.
 
-All spreadsheets are ready in the local run folder:
-PLAYER Data Quality — Run [N] — [YYYY-MM-DD]
+Run #[N] complete. Dashboard updated automatically — live within ~30 seconds.
 
-The dashboard has been updated automatically. Proceeding to send tribe lead messages now.
+Proceeding to send tribe lead messages now.
 
 [Include squad_leads.json refresh reminder if applicable — see Pre-requisite 3]
 ```
@@ -339,8 +326,6 @@ The dashboard has been updated automatically. Proceeding to send tribe lead mess
 ### Step 6 — Proceed to tribe messages (no gate)
 
 > **Dashboard is live after Step 5:** `build_reports.py` commits and pushes `trend_history.json` to GitHub automatically — the dashboard updates within ~30 seconds. No manual action is required before sending tribe messages.
-
-The Excel tribe spreadsheets are saved locally in the run folder (`local_folder` in `run_log.json`).
 
 **Proceed directly to Step 7.**
 
@@ -484,12 +469,12 @@ This ensures labels do not persist into the following week and become stale. The
 | `~/.claude/plugins/installed_plugins.json` | Needs player-jira@local re-added |
 | `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\squad_leads.json` | Engineering Manager Slack IDs per squad and tribe — input for Steps 4–6. Refresh periodically from Notion page in `_meta.notion_page_url`. |
 | `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\process_full_audit.py` | Loads all paginated Jira result files, deduplicates, applies tier rules, maps squads→tribes, runs QC1A stratified sampling, runs QC1B coverage check. Outputs `audit_results.json`. |
-| `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\build_reports.py` | Reads `audit_results.json` and builds all output spreadsheets in a single pass: 5 tribe workbooks (Detail + Summary tabs each) and 1 master workbook (Overview, By Squad, By Field tabs). Single JSON load; all constants defined once. |
+| `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\build_reports.py` | Reads `audit_results.json`, appends run metrics to `run_log.json` and `trend_history.json`, commits and pushes to GitHub. Single JSON load; all constants defined once. |
 | `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\audit_results.json` | Intermediate output from `process_full_audit.py`. Contains all 490 rows with per-field scores, tribe assignments, QC1 sample keys, and QC1B results. Input to `build_reports.py` and the Slack messaging step. |
 | `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\run_log.json` | Append-only log of every workflow run. Each entry stores run number, date, timestamp, total audited, per-tribe counts, and files generated. Written by `build_reports.py` at the end of each run. |
 | `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\trend_history.json` | Per-run compliance metrics (tribe + squad avg scores, gap counts, top offenders). Written by `build_reports.py`, then committed and pushed to GitHub — the dashboard at https://jjvhappening.github.io/Jira-Data-Quality/ reads it directly. |
 | `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\index.html` | Static dashboard served by GitHub Pages — fetches trend_history.json client-side from the raw GitHub URL. |
-| `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\backfill_history.py` | One-time utility: reads existing tribe Excel Detail tabs and reconstructs `trend_history.json` entries. Only needed to recover missed runs. |
+| `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\backfill_history.py` | One-time utility: reconstructs `trend_history.json` entries from historical audit data. Only needed to recover missed runs. |
 | `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\references\Jira Roadmap Logic v2.md` | Field completion rules reference. Kept in sync with `~/.claude/plugins/cache/local/player-jira/1.0.0/references/README.md` (plugin file retains its README.md name as the skills reference it directly). If the plugin README changes, copy its content here and increment the version suffix. |
 
 ---
@@ -501,10 +486,9 @@ QC2 requires user confirmation (writes to Jira). All other data checks use a sep
 | # | After | Verified by | What it checks |
 |---|---|---|---|
 | QC1 | Step 1 — Audit complete | **Verifier sub-agent** | Two parallel checks: **QC1A** — statistically significant sample re-verified against live Jira, score recalculation checked, tier gating confirmed. **QC1B** — coverage check via Areas Impacted query to catch any PLAYER initiatives missed by the main audit. Full detail below. |
-| QC2 | Step 2 — Claude-fix preview | **Deferred — does not block workflow** | Claude saves the full fix proposal to a file and sends Jonathan a Slack message with the list. The main workflow continues immediately (audit, notifications, spreadsheets). Jonathan triggers the fixes separately when ready using: `"Apply player-jira fixes"` |
-| QC3 | Step 5 — Spreadsheets built | **Verifier sub-agent — mandatory, blocks Step 7** | Picks one tribe spreadsheet, re-fetches Jira data for that tribe, and checks: compliance scores are correct, hyperlinks resolve, sort order is correct, row count matches audit. Workflow does not proceed to Slack until this passes. |
-| QC4 | Step 5 — Master spreadsheet | **Verifier sub-agent** | Confirms Overview tab tribe totals and avg scores match the tribe-level spreadsheets (±2pt rounding). **By Field tab note:** By Field counts all rows in `audit_results.json` — including any Unassigned initiatives — so its counts will be slightly higher than the sum of the 5 tribe Detail tabs. This is expected and not a failure. Only flag if the discrepancy is larger than the Unassigned row count. |
-| QC5 | ~~Step 6 — Drive upload~~ | ~~Manual confirmation~~ | _Removed 2026-05-18 — `build_reports.py` auto-uploads `trend_history.json`; Excel upload to Drive is optional and does not gate Slack messages._ |
+| QC2 | Step 2 — Claude-fix preview | **Deferred — does not block workflow** | Claude saves the full fix proposal to a file and sends Jonathan a Slack message with the list. The main workflow continues immediately (audit, notifications). Jonathan triggers the fixes separately when ready using: `"Apply player-jira fixes"` |
+| ~~QC3~~ | ~~Step 5 — Spreadsheets built~~ | ~~Verifier sub-agent~~ | _Removed — verified spreadsheet output that is no longer actively used._ |
+| QC4 | Step 5 — JSON output | **Verifier sub-agent** | Reads `trend_history.json` and `audit_results.json` and confirms: (1) a new run entry exists in `trend_history.json` with the correct date and run number; (2) `total` in the new entry matches the row count in `audit_results.json`; (3) tribe totals within the entry sum to the overall total (±Unassigned rows); (4) `avg_score` is in range 0–100; (5) `run_log.json` has a matching new entry. Flag any discrepancy before proceeding to Slack. |
 
 ---
 
@@ -647,10 +631,10 @@ Supported scopes:
 | Command | What it runs |
 |---|---|
 | `test player workflow: audit squad Transact` | Runs the audit for Transact squad only and prints the gap report |
-| `test player workflow: spreadsheet tribe Manage` | Creates the tribe spreadsheet for Manage only (no upload, no Slack) |
+| `test player workflow: json output tribe Manage` | Runs `build_reports.py` scoped to Manage, then verifies the Manage entry in `audit_results.json` — row count, scores, tribe attribution |
 | `test player workflow: fixes squad APM Experience` | Shows the Claude-fixable preview for APM Experience only |
 | `test player workflow: slack message squad Wallet Core` | Sends the squad Slack message to **Jonathan only** instead of the Squad Lead |
-| `test player workflow: master` | Creates the master spreadsheet from cached audit data (no Slack, no upload) |
+| `test player workflow: json output master` | Runs `build_reports.py` from cached `audit_results.json` and verifies the new `trend_history.json` entry — totals, tribe breakdown, run number sequence |
 
 **Test mode rules:**
 - All Slack messages (squad, tribe, summary) are redirected to Jonathan's Slack handle — no messages sent to actual leads
