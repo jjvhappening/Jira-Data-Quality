@@ -30,6 +30,9 @@ See `skills/` for Claude Code skills used in this workflow.
 | Skill | Purpose |
 |---|---|
 | `gas-manage` | Manage the PLAYER DQ Google Apps Script project via `clasp` — push code, deploy, run functions, set up from scratch. |
+| `player-initiative-audit` | Audit a single PLAYER initiative by issue key (e.g. PLAYER-1404) against P&T field completion rules. |
+| `player-jira-fix` | Fix field values on PLAYER initiatives — preview, confirm, and apply changes back to Jira. Standalone copy for use without the player-jira plugin. |
+| `squad-leads-refresh` | Refresh `squad_leads.json` from the Notion Player Org page — diff EMs, resolve Slack IDs, and apply updates. |
 
 ## Run workflow
 
