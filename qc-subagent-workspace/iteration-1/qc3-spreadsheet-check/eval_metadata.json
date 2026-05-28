@@ -1,0 +1,9 @@
+{
+  "eval_id": 2,
+  "eval_name": "qc3-spreadsheet-check",
+  "prompt": "QC3 sub-agent invocation: verify the Manage tribe spreadsheet sort order and row count, return PASS/FAIL verdict.",
+  "assertions": [
+    "The response contains a line starting with 'VERDICT: PASS' or 'VERDICT: FAIL'",
+    "The VERDICT line appears before any folder-tidy or iterative-improvement content"
+  ]
+}

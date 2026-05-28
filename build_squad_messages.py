@@ -25,6 +25,7 @@ _staleness = (
     f'\n\n⚠️ _Note: This data was extracted {int(_age_hours)}h ago. '
     f'Fields updated in Jira since then will appear in the next run._'
 ) if _age_hours > 48 else ''
+DASHBOARD = 'https://jjvhappening.github.io/Jira-Data-Quality/'
 HANDBOOK = 'https://www.notion.so/superbet/HANDBOOK-Setting-up-Jira-for-P-T-Roadmapping-318032f852c58057a66ce19cf7a22d9e'
 
 SQUAD_MAP = {
@@ -67,6 +68,11 @@ def rag(score):
     if score >= 85: return chr(0x1F7E2)  # green
     elif score >= 70: return chr(0x1F7E1)  # yellow
     else: return chr(0x1F534)  # red
+
+def field_jql_link(keys):
+    key_list = ', '.join(keys)
+    jql = 'project = PLAYER AND issuetype = Initiative AND issueKey in ({})'.format(key_list)
+    return 'https://axilis.atlassian.net/issues/?jql=' + urllib.parse.quote(jql)
 
 def jql_link(squad_jira_names):
     sq_list = ', '.join('"{}"'.format(s) for s in squad_jira_names)
@@ -138,9 +144,11 @@ for slack_id, data in em_data.items():
     avg_score = round(sum(r['score'] for r in rows) / total) if total else 0
 
     gap_counts = {}
+    gap_keys = {}
     for r in rows:
         for m in r['missing']:
             gap_counts[m] = gap_counts.get(m, 0) + 1
+            gap_keys.setdefault(m, []).append(r['key'])
     top_gaps = sorted(gap_counts.items(), key=lambda x: -x[1])[:6]
 
     has_eod = any(f == 'End of Definition Date' for f, _ in top_gaps)
@@ -167,7 +175,12 @@ for slack_id, data in em_data.items():
         ).format(name, '\U0001f44b', sq_display, RUN_NUMBER, total, ro_lines)
 
     else:
-        gap_lines = '\n'.join('• {}: {} initiative{}'.format(f, c, 's' if c > 1 else '') for f, c in top_gaps)
+        gap_lines = '\n'.join(
+            '• <{}|{}: {} initiative{}>'.format(
+                field_jql_link(gap_keys[f]), f, c, 's' if c > 1 else ''
+            )
+            for f, c in top_gaps
+        )
         ro_block = ''
         if ro_for_squad:
             ro_items = '\n'.join('• {} — {}'.format(x['key'], x['note']) for x in ro_for_squad)
@@ -183,6 +196,7 @@ for slack_id, data in em_data.items():
             '<{}|View your initiatives here>\n\n'
             '_Please update these fields at your earliest convenience. See the <{}|P&T Jira Roadmapping Handbook> for guidance on what each field means._'
             '{}\n\n'
+            ':bar_chart: <{}|PLAYER Data Quality Dashboard>\n\n'
             'This is a new process and we\'re actively improving it — feedback and ideas are very welcome.'
         ).format(
             name, '\U0001f44b', sq_display, RUN_NUMBER,
@@ -193,6 +207,7 @@ for slack_id, data in em_data.items():
             jql_url,
             HANDBOOK,
             hint_line,
+            DASHBOARD,
         )
 
     msg += _staleness

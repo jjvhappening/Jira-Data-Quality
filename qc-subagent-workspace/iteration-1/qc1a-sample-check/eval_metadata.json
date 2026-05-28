@@ -1,0 +1,9 @@
+{
+  "eval_id": 1,
+  "eval_name": "qc1a-sample-check",
+  "prompt": "QC1A sub-agent invocation: verify 3 sampled PLAYER initiatives against live Jira and return a PASS/FAIL verdict.",
+  "assertions": [
+    "The response contains a line starting with 'VERDICT: PASS' or 'VERDICT: FAIL'",
+    "The VERDICT line appears before any folder-tidy or iterative-improvement content"
+  ]
+}

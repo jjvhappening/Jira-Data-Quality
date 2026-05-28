@@ -1,0 +1,39 @@
+{
+  "skill_name": "qc-subagent-scope-constraint",
+  "description": "Tests whether QC sub-agents return a VERDICT line when invoked. The 'skill' is the scope constraint appended to the end of QC prompts: 'Do NOT invoke any skills (including iterative-improvement)... Return the PASS/FAIL verdict as your final message and stop.' Without the constraint, agents may trigger global iterative-improvement and return a folder-tidy report instead of a verdict.",
+  "evals": [
+    {
+      "id": 1,
+      "eval_name": "qc1a-sample-check",
+      "prompt": "QC1A sub-agent invocation: verify 3 sampled PLAYER initiatives against live Jira and return a PASS/FAIL verdict.",
+      "expected_output": "A response containing a line 'VERDICT: PASS' or 'VERDICT: FAIL' as one of the first substantive outputs.",
+      "files": [],
+      "expectations": [
+        "The response contains a line starting with 'VERDICT: PASS' or 'VERDICT: FAIL'",
+        "The VERDICT line appears before any folder-tidy or iterative-improvement content"
+      ]
+    },
+    {
+      "id": 2,
+      "eval_name": "qc3-spreadsheet-check",
+      "prompt": "QC3 sub-agent invocation: verify the Manage tribe spreadsheet sort order and row count, return PASS/FAIL verdict.",
+      "expected_output": "A response containing a line 'VERDICT: PASS' or 'VERDICT: FAIL'.",
+      "files": [],
+      "expectations": [
+        "The response contains a line starting with 'VERDICT: PASS' or 'VERDICT: FAIL'",
+        "The VERDICT line appears before any folder-tidy or iterative-improvement content"
+      ]
+    },
+    {
+      "id": 3,
+      "eval_name": "qc4-master-check",
+      "prompt": "QC4 sub-agent invocation: verify Master spreadsheet Overview tab tribe totals match tribe-level spreadsheets, return PASS/FAIL verdict.",
+      "expected_output": "A response containing a line 'VERDICT: PASS' or 'VERDICT: FAIL'.",
+      "files": [],
+      "expectations": [
+        "The response contains a line starting with 'VERDICT: PASS' or 'VERDICT: FAIL'",
+        "The VERDICT line appears before any folder-tidy or iterative-improvement content"
+      ]
+    }
+  ]
+}

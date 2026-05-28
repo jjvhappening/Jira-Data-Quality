@@ -1,0 +1,23 @@
+{
+  "expectations": [
+    {
+      "text": "The response contains a line starting with 'VERDICT: PASS' or 'VERDICT: FAIL'",
+      "passed": true,
+      "evidence": "Line 78: 'VERDICT: FAIL' — verdict line present and correctly formatted"
+    },
+    {
+      "text": "The VERDICT line appears before any folder-tidy or iterative-improvement content",
+      "passed": true,
+      "evidence": "No folder-tidy or iterative-improvement content present. Post-verdict content is QC investigation notes, not iterative-improvement output. Baseline agent returned verdict regardless of constraint."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  },
+  "timing": {
+    "total_duration_seconds": 120.9
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "metadata": {
+    "skill_name": "qc-subagent-scope-constraint",
+    "skill_path": "<embedded in workflow prompt>",
+    "executor_model": "claude-sonnet-4-6",
+    "analyzer_model": "claude-sonnet-4-6",
+    "timestamp": "2026-05-26T08:00:00Z",
+    "evals_run": [1, 2, 3],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "qc1a-sample-check",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 2,
+        "failed": 0,
+        "total": 2,
+        "time_seconds": 101.6,
+        "tokens": 38365,
+        "tool_calls": 8,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The response contains a line starting with 'VERDICT: PASS' or 'VERDICT: FAIL'",
+          "passed": true,
+          "evidence": "Line 118: 'VERDICT: FAIL' — verdict line present and correctly formatted"
+        },
+        {
+          "text": "The VERDICT line appears before any folder-tidy or iterative-improvement content",
+          "passed": true,
+          "evidence": "No folder-tidy or iterative-improvement content present. VERDICT is the final line."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "qc1a-sample-check",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 2,
+        "failed": 0,
+        "total": 2,
+        "time_seconds": 120.9,
+        "tokens": 34773,
+        "tool_calls": 9,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The response contains a line starting with 'VERDICT: PASS' or 'VERDICT: FAIL'",
+          "passed": true,
+          "evidence": "Line 78: 'VERDICT: FAIL' — verdict line present and correctly formatted"
+        },
+        {
+          "text": "The VERDICT line appears before any folder-tidy or iterative-improvement content",
+          "passed": true,
+          "evidence": "No folder-tidy or iterative-improvement content present. Post-verdict content is QC investigation notes, not iterative-improvement output."
+        }
+      ],
+      "notes": ["Baseline agent returned a clean verdict without the constraint — no iterative-improvement triggered in this eval run. Contrast with Run #8 where QC1A Half 1 DID trigger iterative-improvement without the constraint."]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "qc3-spreadsheet-check",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 2,
+        "failed": 0,
+        "total": 2,
+        "time_seconds": 98.0,
+        "tokens": 27550,
+        "tool_calls": 7,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The response contains a line starting with 'VERDICT: PASS' or 'VERDICT: FAIL'",
+          "passed": true,
+          "evidence": "Line 21: 'VERDICT: PASS' — verdict line present and correctly formatted"
+        },
+        {
+          "text": "The VERDICT line appears before any folder-tidy or iterative-improvement content",
+          "passed": true,
+          "evidence": "No folder-tidy or iterative-improvement content present. VERDICT: PASS is the final line."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "qc3-spreadsheet-check",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 2,
+        "failed": 0,
+        "total": 2,
+        "time_seconds": 69.0,
+        "tokens": 27500,
+        "tool_calls": 6,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The response contains a line starting with 'VERDICT: PASS' or 'VERDICT: FAIL'",
+          "passed": true,
+          "evidence": "Line 33: 'VERDICT: PASS' — verdict line present and correctly formatted"
+        },
+        {
+          "text": "The VERDICT line appears before any folder-tidy or iterative-improvement content",
+          "passed": true,
+          "evidence": "No folder-tidy or iterative-improvement content present."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "qc4-master-check",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 2,
+        "failed": 0,
+        "total": 2,
+        "time_seconds": 107.0,
+        "tokens": 28980,
+        "tool_calls": 9,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The response contains a line starting with 'VERDICT: PASS' or 'VERDICT: FAIL'",
+          "passed": true,
+          "evidence": "Line 21: 'VERDICT: PASS' — verdict line present and correctly formatted"
+        },
+        {
+          "text": "The VERDICT line appears before any folder-tidy or iterative-improvement content",
+          "passed": true,
+          "evidence": "No folder-tidy or iterative-improvement content present. VERDICT: PASS is the final line."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "qc4-master-check",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 2,
+        "failed": 0,
+        "total": 2,
+        "time_seconds": 101.1,
+        "tokens": 28679,
+        "tool_calls": 8,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The response contains a line starting with 'VERDICT: PASS' or 'VERDICT: FAIL'",
+          "passed": true,
+          "evidence": "Line 23: 'VERDICT: PASS' — verdict line present and correctly formatted"
+        },
+        {
+          "text": "The VERDICT line appears before any folder-tidy or iterative-improvement content",
+          "passed": true,
+          "evidence": "No folder-tidy or iterative-improvement content present."
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 102.2, "stddev": 4.53, "min": 98.0, "max": 107.0},
+      "tokens": {"mean": 31631.7, "stddev": 5875.1, "min": 27550, "max": 38365}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 97.0, "stddev": 26.19, "min": 69.0, "max": 120.9},
+      "tokens": {"mean": 30317.3, "stddev": 3903.5, "min": 27500, "max": 34773}
+    },
+    "delta": {
+      "pass_rate": "+0.00",
+      "time_seconds": "+5.2",
+      "tokens": "+1314"
+    }
+  },
+  "notes": [
+    "Both assertions pass 100% in both configurations — the constraint does not help in these prompts. This is NOT surprising: eval prompts are short, targeted, and lack the broader context that triggers iterative-improvement in production runs.",
+    "The failure mode (iterative-improvement triggered instead of verdict) occurred in Run #8 when the sub-agent was spawned with rich production context — not a simple eval prompt. These evals serve as a regression check, not a discriminating test.",
+    "Consider adding a more realistic eval: a QC prompt that is embedded inside a larger workflow context (e.g., with a preceding Steps 1–7 summary), which better replicates the production trigger conditions.",
+    "QC1A returns VERDICT: FAIL in both runs — this is correct behaviour given BUG-001 and the 3 new discrepancies found (customfield_12110, customfield_12114, duedate misreads). The eval constraint itself functions correctly.",
+    "Assertion 2 ('VERDICT before folder-tidy content') is non-discriminating: no run produced folder-tidy content at all. This assertion should be strengthened or replaced with a positive test that actually induces iterative-improvement to verify the constraint suppresses it."
+  ]
+}

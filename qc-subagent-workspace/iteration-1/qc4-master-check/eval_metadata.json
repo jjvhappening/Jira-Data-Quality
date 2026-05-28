@@ -1,0 +1,9 @@
+{
+  "eval_id": 3,
+  "eval_name": "qc4-master-check",
+  "prompt": "QC4 sub-agent invocation: verify Master spreadsheet Overview tab tribe totals match tribe-level spreadsheets, return PASS/FAIL verdict.",
+  "assertions": [
+    "The response contains a line starting with 'VERDICT: PASS' or 'VERDICT: FAIL'",
+    "The VERDICT line appears before any folder-tidy or iterative-improvement content"
+  ]
+}
