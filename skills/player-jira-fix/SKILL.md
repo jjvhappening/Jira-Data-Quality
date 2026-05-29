@@ -122,6 +122,30 @@ When `customfield_11250` (Squad) is empty, check `customfield_10001` (Team) as a
 
 **Note on Gamification:** The Squad field option "Gamification" does not currently exist in the Jira Squad field allowedValues. Bugs with Team = "Gamification (Player Engagement Tribe)" or "Player Experience - Gamification" cannot be auto-fixed until a Jira admin adds this Squad option.
 
+## Squad Inference from Assignee (Tier 3 fallback for bugs)
+
+When Team is null and parent chain yields nothing, use the assignee as a third-tier signal.
+
+**Only applicable to bugs, not initiatives.**
+
+1. Collect the assignee `accountId` from the bug.
+2. Search for their other issues where Squad is already set:
+   ```
+   assignee = "<accountId>" AND Squad is not EMPTY ORDER BY created DESC
+   ```
+   Fetch `customfield_11250` from the results. Take the first (most recent) Squad value found.
+3. If Squad is not set on any of their issues, fall back to Team field on their other issues:
+   ```
+   assignee = "<accountId>" AND Team is not EMPTY ORDER BY created DESC
+   ```
+   Apply the team→squad mapping table to derive Squad.
+4. If the parent epic has a Team set, apply the team→squad mapping table to that Team value.
+5. If none of the above yields a result: flag as **unresolvable — manual triage required**.
+
+**Batch efficiently:** Group all no-team bugs by assignee, then fire one JQL per unique assignee (not one per bug).
+
+**Hard floor:** Bugs that are both unassigned and have no Team field cannot be resolved via inference. Generate a JQL `issue in (KEY1, KEY2, ...)` list and share with squad leads for manual assignment. Do not spend further time attempting inference on these.
+
 ## Fix Workflow
 
 ### Step 1 — Determine scope
