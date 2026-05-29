@@ -2,7 +2,7 @@
   "_meta": {
     "description": "Engineering Manager Slack ID mapping for PLAYER Jira data quality workflow. Squad-level messages go to the Engineering Manager for each squad. Tribe-level summaries go to the tribe EM lead. Used for local lookup — no Slack search needed at runtime.",
     "notion_page_url": "https://www.notion.so/superbet/Player-Org-29b032f852c5807fab59c839b9710512",
-    "last_refreshed": "2026-05-11",
+    "last_refreshed": "2026-05-29",
     "refresh_instructions": "1. Fetch the Notion page above. 2. For any changed 'Engineering Manager' cells, call notion-get-users with the new notion_user_id to get their email. 3. Call slack_search_users with their email to get the new slack_id. 4. Update this file and set last_refreshed to today."
   },
   "notification_policy": {
@@ -38,7 +38,7 @@
             "_note": "Changed from Gordan Valjak 2026-05-11 — Notion now shows Brian Hobbs as Thundercats EM. Brian also covers Sb Club Migration."
           }
         },
-        "Bonus Integration": {
+        "Engagement Integrations": {
           "engineering_manager": {
             "name": "Flavio Kruger",
             "email": "flavio.kruger@happening.xyz",

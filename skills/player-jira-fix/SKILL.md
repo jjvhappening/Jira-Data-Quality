@@ -1,17 +1,42 @@
 ---
 name: player-jira-fix
-description: Fix and update field values on PLAYER Jira initiatives based on the P&T Roadmapping rules. Use this skill when the user wants to correct, populate, or bulk-update fields on PLAYER initiatives — such as setting missing Product Leads, updating Health Status, correcting Roadmap Priority, or applying any other field changes based on the roadmapping handbook rules. Trigger on phrases like "fix PLAYER initiatives", "update Jira fields", "set the missing fields", "correct these initiatives", "bulk update", "apply fixes", "fill in the gaps", or any request to write field values back to Jira for PLAYER initiatives. Always confirm with the user before writing any changes to Jira.
+description: Fix and update field values on PLAYER Jira initiatives and Player Area bugs based on the P&T Roadmapping rules. Use this skill when the user wants to correct, populate, or bulk-update fields on PLAYER initiatives or bugs across Player Area projects (BCN, PLAYER, FPT, TRX, MANAGE) — such as setting missing Squad, Product Leads, Health Status, Roadmap Priority, or any other field. Trigger on phrases like "fix PLAYER initiatives", "fix bugs", "update Jira fields", "set the missing fields", "correct these initiatives", "bulk update", "apply fixes", "fill in the gaps". Always confirm with the user before writing any changes to Jira.
 ---
 
-# PLAYER Initiative Fix Skill
+# PLAYER Jira Fix Skill
 
-This skill corrects field values on PLAYER Jira initiatives, writing updates back via the Jira API. It always shows a preview of planned changes and requires explicit user confirmation before applying anything.
+This skill corrects field values on PLAYER Jira initiatives and bugs, writing updates back via the Jira API. It always shows a preview of planned changes and requires explicit user confirmation before applying anything.
+
+## Scope
+
+This skill handles two issue types:
+
+### Initiatives (PLAYER project)
+Full roadmapping field compliance per the P&T Roadmapping rules. See Rules Reference below.
+
+### Bugs (Player Area projects: BCN, PLAYER, FPT, TRX, MANAGE)
+Primary fixable fields on bugs:
+- **Squad** (`customfield_11250`) — derive from Team field using the confirmed mapping table (see Squad Auto-fill section)
+- **Tribes Impacted** (`customfield_12109`) — derive from squad's tribe, only if currently empty
+- **Team** (`customfield_10001`) — only backfill if explicitly requested
+
+JQL for open bugs with Squad empty:
+```
+issuetype = Bug AND project in (BCN, PLAYER, FPT, TRX, MANAGE) AND statusCategory != Done AND Squad is EMPTY
+```
+
+**Note:** Gaming (GAM) is a separate area — exclude from Player Area bug fixes. Fraud Investigation team is an ops team, not Player — skip those bugs.
 
 ## Rules Reference
 
 Full rules: `C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\references\Jira Roadmap Logic v2.md`
 
 Read it before starting — it defines which fields are required at each PDLC stage and what values are valid.
+
+**Bug fix reference** (team→squad mapping, Squad option IDs, project field availability, exclusions):
+`C:\Users\JonVince\Documents\GitHub\Jira-Data-Quality\references\player_area_bug_squad_fix.md`
+
+Read this when the task involves fixing Squad fields on Player Area bugs.
 
 ## Safety First
 
@@ -62,15 +87,40 @@ Flag these but do not attempt to write them:
 When `customfield_11250` (Squad) is empty, check `customfield_10001` (Team) as a fallback.
 
 1. Read the Team value. If null or empty, skip.
-2. Strip any tribe-name suffix — Team values often take the form `"{Squad} - {TribeName}"`. Remove everything from the first ` - ` onwards to get the candidate.
-3. Fetch the complete Squad universe using `getJiraIssueTypeMetaWithFields` for the PLAYER project, Initiative issue type (ID: `10366`). Extract `allowedValues` from `customfield_11250`. **Do NOT use a JQL query** — this only returns squads currently in use and misses valid options not yet applied.
-4. Fuzzy-match the candidate (priority order):
+2. Strip tribe-name suffix (two forms):
+   - `"{Squad} - {TribeName}"` — remove everything from the first ` - ` onwards
+   - `"{Squad} ({TribeName})"` — remove the parenthetical suffix (e.g. "Thundercats (Engagement Tribe)" → "Thundercats")
+3. Apply the **confirmed team→squad mapping table** (checked against Notion Player Org 2026-05-29) before fuzzy-matching:
+
+   | Team name (after stripping) | Squad field value | Tribe |
+   |---|---|---|
+   | Engagement Integrations | Engagement Integrations | Player Engagement |
+   | Payment Experience | Payment Experience | Transact |
+   | Payment Platform | Payment Platform | Transact |
+   | Wallet Core | Wallet Core | Transact |
+   | Wallet Integrations | Wallet Integrations | Transact |
+   | Fraud Prevention | Fraud Engineering | Fraud Prevention |
+   | Loyalty | Loyalty | Player Engagement |
+   | GraySkull / Grayskull / Bonus Platform | GraySkull (Bonus Platform) | Player Engagement |
+   | Thundercats | Thundercats | Player Engagement |
+   | Mobius | Mobius Platform | Player Engagement |
+   | Player Onboarding | Player Onboarding | Manage |
+   | Player Identity | Player Identity | Manage |
+   | Player Account / Player Manage / PAM | Player Account | Manage |
+   | Manage Platform | Manage Platform | Manage |
+   | Player Support | Player Support | Manage |
+   | APM Experience | APM Experience | Transact |
+   | Card Experience | Card Experience | Transact |
+
+4. If not in the table above, fetch the complete Squad universe using `getJiraIssueTypeMetaWithFields` for the relevant project, Bug issue type (ID: `10004`). Extract `allowedValues` from `customfield_11250`. Fuzzy-match (priority order):
    - **Exact match** (case-insensitive) — confidence: high
    - **Starts-with match** — confidence: medium
    - **Substring match** — confidence: medium
    - **No match** — do not propose a value; note "Team value could not be matched to a known squad"
 5. If the candidate matches more than one squad at the same confidence level, surface all options and ask the user to confirm.
 6. API format: `[{"value": "Squad Name"}]`
+
+**Note on Gamification:** The Squad field option "Gamification" does not currently exist in the Jira Squad field allowedValues. Bugs with Team = "Gamification (Player Engagement Tribe)" or "Player Experience - Gamification" cannot be auto-fixed until a Jira admin adds this Squad option.
 
 ## Fix Workflow
 
